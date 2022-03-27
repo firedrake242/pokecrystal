@@ -692,6 +692,7 @@ MeowthEvosAttacks:
 	db 20, PAY_DAY
 	db 28, FAINT_ATTACK
 	db 35, SCREECH
+	db 40, NASTY_PLOT
 	db 41, FURY_SWIPES
 	db 46, SLASH
 	db 0 ; no more level-up moves
@@ -706,6 +707,7 @@ PersianEvosAttacks:
 	db 29, FAINT_ATTACK
 	db 38, SCREECH
 	db 46, FURY_SWIPES
+	db 48, NASTY_PLOT
 	db 53, SLASH
 	db 0 ; no more level-up moves
 
@@ -1301,6 +1303,7 @@ DrowzeeEvosAttacks:
 	db 31, POISON_GAS
 	db 36, MEDITATE
 	db 40, PSYCHIC_M
+	db 41, NASTY_PLOT
 	db 43, PSYCH_UP
 	db 45, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -1317,6 +1320,7 @@ HypnoEvosAttacks:
 	db 33, POISON_GAS
 	db 40, MEDITATE
 	db 49, PSYCHIC_M
+	db 53, NASTY_PLOT
 	db 55, PSYCH_UP
 	db 60, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -2056,6 +2060,7 @@ MewEvosAttacks:
 	db 30, METRONOME
 	db 40, PSYCHIC_M
 	db 50, ANCIENTPOWER
+	db 60, NASTY_PLOT
 	db 0 ; no more level-up moves
 
 ChikoritaEvosAttacks:
@@ -2355,6 +2360,7 @@ PichuEvosAttacks:
 	db 6, TAIL_WHIP
 	db 8, THUNDER_WAVE
 	db 11, SWEET_KISS
+	db 16, NASTY_PLOT
 	db 0 ; no more level-up moves
 
 CleffaEvosAttacks:
@@ -2580,6 +2586,7 @@ AipomEvosAttacks:
 	db 19, FURY_SWIPES
 	db 27, SWIFT
 	db 36, SCREECH
+	db 39, NASTY_PLOT
 	db 46, AGILITY
 	db 0 ; no more level-up moves
 
@@ -2685,6 +2692,7 @@ SlowkingEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CURSE
 	db 1, TACKLE
+	db 1, NASTY_PLOT
 	db 6, GROWL
 	db 15, WATER_GUN
 	db 20, CONFUSION
@@ -2730,6 +2738,7 @@ GirafarigEvosAttacks:
 	db 20, AGILITY
 	db 30, BATON_PASS
 	db 41, PSYBEAM
+	db 46, NASTY_PLOT
 	db 54, CRUNCH
 	db 0 ; no more level-up moves
 
@@ -3048,12 +3057,14 @@ HoundourEvosAttacks:
 	db 27, FAINT_ATTACK
 	db 35, FLAMETHROWER
 	db 43, CRUNCH
+	db 52, NASTY_PLOT
 	db 0 ; no more level-up moves
 
 HoundoomEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
 	db 1, EMBER
+	db 1, NASTY_PLOT
 	db 7, ROAR
 	db 13, SMOG
 	db 20, BITE
