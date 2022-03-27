@@ -7,7 +7,7 @@ BattleCommand_Teleport:
 
 ; Need something to switch to
 	call CheckAnyOtherAlivePartyMons
-	jp z, FailedBatonPass
+	jp z, FailedTeleport
 
 	call UpdateBattleMonInParty
 	call AnimateCurrentMove
@@ -32,7 +32,7 @@ BattleCommand_Teleport:
 	ld b, SCGB_BATTLE_COLORS
 	call GetSGBLayout
 	call SetPalettes
-	call BatonPass_LinkPlayerSwitch
+	call Teleport_LinkPlayerSwitch
 
 ; Mobile link battles handle entrances differently
 	farcall CheckMobileBattleError
@@ -41,21 +41,21 @@ BattleCommand_Teleport:
 	ld hl, PassedBattleMonEntrance
 	call CallBattleCore
 
-	call ResetBatonPassStatus
+	call ResetTeleportStatus
 	ret
 
 .Enemy:
 ; Wildmons don't have anything to switch to
 	ld a, [wBattleMode]
 	dec a ; WILDMON
-	jp z, FailedBatonPass
+	jp z, FailedTeleport
 
 	call CheckAnyOtherAliveEnemyMons
-	jp z, FailedBatonPass
+	jp z, FailedTeleport
 
 	call UpdateEnemyMonInParty
 	call AnimateCurrentMove
-	call BatonPass_LinkEnemySwitch
+	call Teleport_LinkEnemySwitch
 
 ; Mobile link battles handle entrances differently
 	farcall CheckMobileBattleError
@@ -76,9 +76,9 @@ BattleCommand_Teleport:
 	ld hl, SpikesDamage
 	call CallBattleCore
 
-	jr ResetBatonPassStatus
+	jr ResetTeleportStatus
 
-BatonPass_LinkPlayerSwitch:
+Teleport_LinkPlayerSwitch:
 	ld a, [wLinkMode]
 	and a
 	ret z
@@ -95,7 +95,7 @@ BatonPass_LinkPlayerSwitch:
 	ld [wBattlePlayerAction], a
 	ret
 
-BatonPass_LinkEnemySwitch:
+Teleport_LinkEnemySwitch:
 	ld a, [wLinkMode]
 	and a
 	ret z
@@ -109,23 +109,23 @@ BatonPass_LinkEnemySwitch:
 	ld b, a
 	ld a, [wBattleAction]
 	cp BATTLEACTION_SWITCH1
-	jr c, .baton_pass
+	jr c, .teleport
 	cp b
 	jr c, .switch
 
-.baton_pass
+.teleport
 	ld a, [wCurOTMon]
 	add BATTLEACTION_SWITCH1
 	ld [wBattleAction], a
 .switch
 	jp CloseWindow
 
-FailedBatonPass:
+FailedTeleport:
 	call AnimateFailedMove
 	jp PrintButItFailed
 
-ResetBatonPassStatus:
-; Reset status changes that aren't passed by Baton Pass.
+ResetTeleportStatus:
+; Reset status changes that aren't passed by Teleport.
 
 	; Nightmare isn't passed.
 	ld a, BATTLE_VARS_STATUS
