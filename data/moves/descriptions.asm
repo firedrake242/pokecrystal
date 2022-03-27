@@ -253,14 +253,13 @@ MoveDescriptions::
 	dw WhirlpoolDescription
 	dw BeatUpDescription
 	dw NastyPlotDescription
+	dw HexDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFDDescription
 	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 	assert_table_length $100
 
-MoveFDDescription:
 MoveFEDescription:
 MoveFFDescription:
 Move00Description:
@@ -1273,3 +1272,7 @@ BeatUpDescription:
 NastyPlotDescription:
 	db	 "Sharply increases"
 	next "user's SPCL.ATK.@"
+	
+HexDescription:
+	db   "Stronger against"
+	next "unhealthy foes.@"
