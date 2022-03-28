@@ -37,7 +37,6 @@
 	charmap "<DEXEND>",  $5f
 
 
-
 ; Actual characters (from gfx/font/font_battle_extra.png)
 
 	charmap "<LV>",      $6e
@@ -154,6 +153,7 @@
 	
 	charmap "<PO>",		 $e4
 	charmap "<KE>",		 $e5
+	
 	charmap "?",         $e6
 	charmap "!",         $e7
 	charmap ".",         $e8
