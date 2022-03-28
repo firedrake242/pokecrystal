@@ -376,8 +376,8 @@ WokeUpText:
 	prompt
 
 FrozenSolidText:
-	text "<USER>"
-	line "is frozen solid!"
+	text "<USER>'s"
+	line "hurt by its chill!"
 	prompt
 
 FlinchedText:
@@ -721,12 +721,12 @@ WasBurnedText:
 
 DefrostedOpponentText:
 	text "<TARGET>"
-	line "was defrosted!"
+	line "warmed up!"
 	prompt
 
 WasFrozenText:
 	text "<TARGET>"
-	line "was frozen solid!"
+	line "got a deep chill!"
 	prompt
 
 WontRiseAnymoreText:
