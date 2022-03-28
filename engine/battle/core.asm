@@ -285,7 +285,6 @@ HandleBetweenTurnEffects:
 .NoMoreFaintingConditions:
 	call HandleLeftovers
 	call HandleMysteryberry
-	; call HandleDefrost
 	call HandleSafeguard
 	call HandleScreens
 	call HandleStatBoostingHeldItems
@@ -1013,11 +1012,11 @@ ResidualDamage:
 
 	ld hl, HurtByPoisonText
 	ld de, ANIM_PSN
-	and 1 << BRN
+	bit PSN, a
 	jr z, .got_anim
 	ld hl, HurtByBurnText
 	ld de, ANIM_BRN
-	and 1 << FRZ
+	bit BRN, a
 	jr z, .got_anim
 	ld hl, FrozenSolidText
 	ld de, ANIM_FRZ
