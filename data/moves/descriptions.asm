@@ -254,13 +254,12 @@ MoveDescriptions::
 	dw BeatUpDescription
 	dw NastyPlotDescription
 	dw HexDescription
+	dw HailDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 	assert_table_length $100
 
-MoveFEDescription:
 MoveFFDescription:
 Move00Description:
 	db "?@"
@@ -1276,3 +1275,7 @@ NastyPlotDescription:
 HexDescription:
 	db   "Stronger against"
 	next "unhealthy foes.@"
+	
+HailDescription:
+	db   "Inflicts damage"
+	next "every turn.@"

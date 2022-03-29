@@ -181,6 +181,7 @@ ENDM
 	command startloop               ; ae
 	command curl                    ; af
 	command hex						; b0
+	command starthail				; b1
 NUM_EFFECT_COMMANDS EQU const_value - 1
 
 	const_def -1, -1

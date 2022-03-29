@@ -2096,3 +2096,10 @@ Hex:
 	buildopponentrage
 	kingsrock
 	endmove
+	
+Hail:
+	checkobedience
+	usedmovetext
+	doturn
+	starthail
+	endmove
