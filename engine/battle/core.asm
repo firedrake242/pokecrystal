@@ -1635,7 +1635,7 @@ HandleWeather:
 	
 ; ended
 	ld hl, .WeatherEndedMessages
-	call .PringWeatherMessage
+	call .PrintWeatherMessage
 	xor a
 	ld [wBattleWeather], a
 	ret
