@@ -1167,6 +1167,7 @@ SeelEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
 	db 5, GROWL
+	db 10, HAIL
 	db 16, AURORA_BEAM
 	db 21, REST
 	db 32, TAKE_DOWN
@@ -1178,6 +1179,7 @@ DewgongEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
 	db 1, GROWL
+	db 1, HAIL
 	db 1, AURORA_BEAM
 	db 5, GROWL
 	db 16, AURORA_BEAM
@@ -1221,6 +1223,7 @@ ShellderEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, WITHDRAW
+	db 1, HAIL
 	db 9, SUPERSONIC
 	db 17, AURORA_BEAM
 	db 25, PROTECT
@@ -1235,6 +1238,7 @@ CloysterEvosAttacks:
 	db 1, SUPERSONIC
 	db 1, AURORA_BEAM
 	db 1, PROTECT
+	db 30, HAIL
 	db 33, SPIKES
 	db 41, SPIKE_CANNON
 	db 0 ; no more level-up moves
@@ -1700,6 +1704,7 @@ JynxEvosAttacks:
 	db 1, LICK
 	db 1, LOVELY_KISS
 	db 1, POWDER_SNOW
+	db 2, HAIL
 	db 9, LOVELY_KISS
 	db 13, POWDER_SNOW
 	db 21, DOUBLESLAP
@@ -1789,6 +1794,7 @@ LaprasEvosAttacks:
 	db 1, WATER_GUN
 	db 1, GROWL
 	db 1, SING
+	db 1, HAIL
 	db 8, MIST
 	db 15, BODY_SLAM
 	db 22, CONFUSE_RAY
@@ -1962,12 +1968,14 @@ ArticunoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, GUST
 	db 1, POWDER_SNOW
+	db 1, HAIL
 	db 13, MIST
 	db 25, AGILITY
 	db 37, MIND_READER
 	db 49, ICE_BEAM
 	db 61, REFLECT
 	db 73, BLIZZARD
+	db 73, HAIL
 	db 0 ; no more level-up moves
 
 ZapdosEvosAttacks:
@@ -2847,9 +2855,11 @@ QwilfishEvosAttacks:
 	db 1, POISON_STING
 	db 10, HARDEN
 	db 10, MINIMIZE
+	db 15, PAIN_SPLIT
 	db 19, WATER_GUN
-	db 28, PIN_MISSILE
+	db 28, TWINEEDLE
 	db 37, TAKE_DOWN
+	db 40, EXPLOSION
 	db 46, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -2900,9 +2910,10 @@ SneaselEvosAttacks:
 	db 25, FAINT_ATTACK
 	db 33, FURY_SWIPES
 	db 41, AGILITY
+	db 41, SWORDS_DANCE
 	db 49, SLASH
-	db 57, BEAT_UP
-	db 65, METAL_CLAW
+	db 55, BEAT_UP
+	db 57, METAL_CLAW
 	db 0 ; no more level-up moves
 
 TeddiursaEvosAttacks:
@@ -2965,11 +2976,13 @@ SwinubEvosAttacks:
 	db EVOLVE_LEVEL, 33, PILOSWINE
 	db 0 ; no more evolutions
 	db 1, TACKLE
+	db 1, HAIL
 	db 10, POWDER_SNOW
 	db 19, ENDURE
 	db 28, TAKE_DOWN
 	db 37, MIST
 	db 46, BLIZZARD
+	db 46, HAIL
 	db 55, AMNESIA
 	db 0 ; no more level-up moves
 
@@ -2978,12 +2991,14 @@ PiloswineEvosAttacks:
 	db 1, HORN_ATTACK
 	db 1, POWDER_SNOW
 	db 1, ENDURE
+	db 1, HAIL
 	db 10, POWDER_SNOW
 	db 19, ENDURE
 	db 28, TAKE_DOWN
 	db 33, FURY_ATTACK
 	db 42, MIST
 	db 56, BLIZZARD
+	db 56, HAIL
 	db 70, AMNESIA
 	db 0 ; no more level-up moves
 
@@ -3027,7 +3042,17 @@ OctilleryEvosAttacks:
 
 DelibirdEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, GUST
+	db 1, POWDER_SNOW
+	db 1, HAIL
 	db 1, PRESENT
+	db 13, MIST
+	db 20, SOFTBOILED
+	db 25, HEAL_BELL
+	db 30, ICE_BEAM
+	db 35, REFLECT
+	db 40, BLIZZARD
+	db 40, HAIL
 	db 0 ; no more level-up moves
 
 MantineEvosAttacks:
@@ -3184,6 +3209,7 @@ SmoochumEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, LICK
+	db 1, HAIL
 	db 9, SWEET_KISS
 	db 13, POWDER_SNOW
 	db 21, CONFUSION
