@@ -1787,7 +1787,6 @@ HandleWeather:
 	ld hl, StartedNightmareText
 	jp StdBattleTextbox
 	
-	
 
 .PrintWeatherMessage:
 	ld a, [wBattleWeather]
@@ -1807,6 +1806,7 @@ HandleWeather:
 	dw BattleText_TheSunlightIsStrong
 	dw BattleText_TheSandstormRages
 	dw BattleText_HailContinuesToFall
+	dw BattleText_TheMoonHangsAbove
 
 .WeatherEndedMessages:
 ; entries correspond to WEATHER_* constants
@@ -1814,6 +1814,7 @@ HandleWeather:
 	dw BattleText_TheSunlightFaded
 	dw BattleText_TheSandstormSubsided
 	dw BattleText_TheHailStopped
+	dw BattleText_TheMoonSet
 
 SubtractHPFromTarget:
 	call SubtractHP
