@@ -177,13 +177,6 @@ DreamEater:
 	buildopponentrage
 	endmove
 
-MirrorMove:
-	checkobedience
-	usedmovetext
-	doturn
-	mirrormove
-	endmove
-
 AttackUp:
 	checkobedience
 	usedmovetext

@@ -233,7 +233,6 @@ PidgeyEvosAttacks:
 	db 21, WHIRLWIND
 	db 29, WING_ATTACK
 	db 37, AGILITY
-	db 47, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
 PidgeottoEvosAttacks:
@@ -248,7 +247,6 @@ PidgeottoEvosAttacks:
 	db 23, WHIRLWIND
 	db 33, WING_ATTACK
 	db 43, AGILITY
-	db 55, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
 PidgeotEvosAttacks:
@@ -263,7 +261,6 @@ PidgeotEvosAttacks:
 	db 23, WHIRLWIND
 	db 33, WING_ATTACK
 	db 46, AGILITY
-	db 61, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
 RattataEvosAttacks:
@@ -298,7 +295,6 @@ SpearowEvosAttacks:
 	db 7, LEER
 	db 13, FURY_ATTACK
 	db 25, PURSUIT
-	db 31, MIRROR_MOVE
 	db 37, DRILL_PECK
 	db 43, AGILITY
 	db 0 ; no more level-up moves
@@ -312,7 +308,6 @@ FearowEvosAttacks:
 	db 7, LEER
 	db 13, FURY_ATTACK
 	db 26, PURSUIT
-	db 32, MIRROR_MOVE
 	db 40, DRILL_PECK
 	db 47, AGILITY
 	db 0 ; no more level-up moves
