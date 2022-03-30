@@ -182,4 +182,5 @@ BattleCommandPointers:
 	dw BattleCommand_Curl
 	dw BattleCommand_Hex
 	dw BattleCommand_StartHail
+	dw BattleCommand_StartFullMoon
 	assert_table_length NUM_EFFECT_COMMANDS

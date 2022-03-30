@@ -1783,7 +1783,7 @@ Moonlight:
 	checkobedience
 	usedmovetext
 	doturn
-	healnite
+	startfullmoon
 	endmove
 
 HiddenPower:
