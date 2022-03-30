@@ -1647,7 +1647,6 @@ HandleWeather:
 	ld a, [wBattleWeather]
 	cp WEATHER_SANDSTORM
 	jr nz, .check_hail
-	jr .check_full_moon
 
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -1707,7 +1706,7 @@ HandleWeather:
 .check_hail
 	ld a, [wBattleWeather]
 	cp WEATHER_HAIL
-	ret nz
+	jr nz, .check_full_moon
 	
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -1780,14 +1779,13 @@ HandleWeather:
 .FullMoonNightmare:
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
-	bit SLP
+	and SLP
 	ret z
 	
 	set SUBSTATUS_NIGHTMARE, [hl]
 	ld hl, StartedNightmareText
 	jp StdBattleTextbox
 	
-
 .PrintWeatherMessage:
 	ld a, [wBattleWeather]
 	dec a
