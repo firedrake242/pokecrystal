@@ -6388,8 +6388,6 @@ CheckSubstituteOpp:
 
 INCLUDE "engine/battle/move_effects/selfdestruct.asm"
 
-INCLUDE "engine/battle/move_effects/mirror_move.asm"
-
 INCLUDE "engine/battle/move_effects/metronome.asm"
 
 CheckUserMove:
