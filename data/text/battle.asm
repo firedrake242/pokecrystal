@@ -956,6 +956,11 @@ ProtectedByText:
 	text "!"
 	prompt
 
+MirrorMoveFailedText:
+	text "The MIRROR MOVE"
+	next "failed!"
+	prompt
+
 StoleText:
 	text "<USER>"
 	line "stole @"
