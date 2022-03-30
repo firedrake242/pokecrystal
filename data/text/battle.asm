@@ -149,6 +149,11 @@ BattleText_HailContinuesToFall:
 	text "Hail continues to"
 	line "fall"
 	prompt
+	
+BattleText_TheMoonHangsAbove:
+	text "A full moon hangs"
+	line "in the sky"
+	prompt
 
 BattleText_TheRainStopped:
 	text "The rain stopped."
@@ -166,6 +171,10 @@ BattleText_TheSandstormSubsided:
 	
 BattleText_TheHailStopped:
 	text "the hail stopped."
+	prompt
+	
+BattleText_TheMoonSet:
+	text "the moon set."
 	prompt
 
 BattleText_EnemyMonFainted:
@@ -1126,4 +1135,8 @@ PeltedByHailText:
 	line "is pelted by HAIL!"
 	prompt
 	
+TheFullMoonRisesText:
+	text "The full moon"
+	line "is rising!"
+	prompt
 	

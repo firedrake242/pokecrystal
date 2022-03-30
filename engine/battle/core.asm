@@ -1647,6 +1647,7 @@ HandleWeather:
 	ld a, [wBattleWeather]
 	cp WEATHER_SANDSTORM
 	jr nz, .check_hail
+	jr .check_full_moon
 
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -1755,6 +1756,38 @@ HandleWeather:
 
 	ld hl, PeltedByHailText
 	jp StdBattleTextbox
+	
+.check_full_moon:
+	ld a, [wBattleWeather]
+	cp WEATHER_FULL_MOON
+	ret nz
+	
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .enemy_first_full_moon
+	
+; player first
+	call SetPlayerTurn
+	call .FullMoonNightmare
+	call SetEnemyTurn
+	jr .FullMoonNightmare
+	
+.enemy_first_full_moon
+	call SetEnemyTurn
+	call .FullMoonNightmare
+	call SetPlayerTurn
+	
+.FullMoonNightmare:
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	bit SLP
+	ret z
+	
+	set SUBSTATUS_NIGHTMARE, [hl]
+	ld hl, StartedNightmareText
+	jp StdBattleTextbox
+	
+	
 
 .PrintWeatherMessage:
 	ld a, [wBattleWeather]
