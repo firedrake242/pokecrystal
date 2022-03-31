@@ -17,7 +17,11 @@ EnvironmentColorsPointers:
 	dw .OutdoorColorsSpring ; TOWN_SPRING
 	assert_table_length NUM_ENVIRONMENTS + 1
 
-; Valid indices: $00 - $29 (see gfx/tilesets/bg_tiles.pal)
+; Valid indices: 
+; Summer: 	$00 - $29 (see gfx/tilesets/bg_tiles.pal)
+; Fall:		$30 - $47
+; Winter:
+; Spring:
 .OutdoorColors:
 	db $00, $01, $02, $28, $04, $05, $06, $07 ; morn
 	db $08, $09, $0a, $28, $0c, $0d, $0e, $0f ; day
@@ -43,9 +47,9 @@ EnvironmentColorsPointers:
 	db $18, $19, $1a, $1b, $1c, $1d, $1e, $1f ; dark
 	
 .OutdoorColorsFall:
-	db $00, $01, $02, $28, $04, $05, $06, $07 ; morn
-	db $08, $09, $0a, $28, $0c, $0d, $0e, $0f ; day
-	db $10, $11, $12, $29, $14, $15, $16, $17 ; nite
+	db $30, $31, $32, $28, $34, $35, $36, $37 ; morn
+	db $38, $39, $3a, $28, $3c, $3d, $3e, $3f ; day
+	db $40, $41, $42, $29, $44, $45, $46, $47 ; nite
 	db $18, $19, $1a, $1b, $1c, $1d, $1e, $1f ; dark
 
 .OutdoorColorsWinter:
