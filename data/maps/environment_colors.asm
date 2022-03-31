@@ -43,7 +43,19 @@ EnvironmentColorsPointers:
 	db $18, $19, $1a, $1b, $1c, $1d, $1e, $1f ; dark
 	
 .OutdoorColorsFall:
+	db $00, $01, $02, $28, $04, $05, $06, $07 ; morn
+	db $08, $09, $0a, $28, $0c, $0d, $0e, $0f ; day
+	db $10, $11, $12, $29, $14, $15, $16, $17 ; nite
+	db $18, $19, $1a, $1b, $1c, $1d, $1e, $1f ; dark
 
 .OutdoorColorsWinter:
-
+	db $00, $01, $02, $28, $04, $05, $06, $07 ; morn
+	db $08, $09, $0a, $28, $0c, $0d, $0e, $0f ; day
+	db $10, $11, $12, $29, $14, $15, $16, $17 ; nite
+	db $18, $19, $1a, $1b, $1c, $1d, $1e, $1f ; dark
+	
 .OutdoorColorsSpring:
+	db $00, $01, $02, $28, $04, $05, $06, $07 ; morn
+	db $08, $09, $0a, $28, $0c, $0d, $0e, $0f ; day
+	db $10, $11, $12, $29, $14, $15, $16, $17 ; nite
+	db $18, $19, $1a, $1b, $1c, $1d, $1e, $1f ; dark
