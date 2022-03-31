@@ -81,4 +81,62 @@
 	RGB 15,14,24, 12,09,15, 08,04,05, 00,00,00 ; brown      $45
 	RGB 15,14,24, 15,07,02, 11,04,02, 00,00,00 ; roof       $46
 	RGB 31,31,16, 31,31,16, 14,09,00, 00,00,00 ; text       $47
+; morn_winter
+; gray       $48
+; red        $49
+; green      $4a
+; water      $4b
+; yellow     $4c
+; brown      $4d
+; roof       $4e
+; text       $4f
 
+; day_winter
+; gray       $50
+; red        $51
+; green      $52
+; water      $53
+; yellow     $54
+; brown      $55
+; roof       $56
+; text       $57
+
+; nite_winter
+; gray       $58
+; red        $59
+; green      $5a
+; water      $5b
+; yellow     $5c
+; brown      $5d
+; roof       $5e
+; text       $5f
+
+; morn_spring
+; gray       $60
+; red        $61
+; green      $62
+; water      $63
+; yellow     $64
+; brown      $65
+; roof       $66
+; text       $67
+
+; day_spring
+; gray       $68
+; red        $69
+; green      $6a
+; water      $6b
+; yellow     $6c
+; brown      $6d
+; roof       $6e
+; text       $6f
+
+; nite_spring [possibly obsolete]
+; gray       $70
+; red        $71
+; green      $72
+; water      $73
+; yellow     $74
+; brown      $75
+; roof       $76
+; text       $77
