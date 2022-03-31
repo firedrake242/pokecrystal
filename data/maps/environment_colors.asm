@@ -1,14 +1,20 @@
 EnvironmentColorsPointers:
 ; entries correspond to environment constants (see constants/map_data_constants.asm)
 	table_width 2, EnvironmentColorsPointers
-	dw .OutdoorColors ; unused
-	dw .OutdoorColors ; TOWN
-	dw .OutdoorColors ; ROUTE
-	dw .IndoorColors  ; INDOOR
-	dw .DungeonColors ; CAVE
-	dw .Env5Colors    ; ENVIRONMENT_5
-	dw .IndoorColors  ; GATE
-	dw .DungeonColors ; DUNGEON
+	dw .OutdoorColors 		; unused
+	dw .OutdoorColors 		; TOWN
+	dw .OutdoorColors 		; ROUTE
+	dw .IndoorColors  		; INDOOR
+	dw .DungeonColors 		; CAVE
+	dw .Env5Colors    		; ENVIRONMENT_5
+	dw .IndoorColors  		; GATE
+	dw .DungeonColors 		; DUNGEON
+	dw .OutdoorColorsFall	; TOWN_FALL
+	dw .OutdoorColorsFall	; ROUTE_FALL
+	dw .OutdoorColorsWinter ; TOWN_WINTER
+	dw .OutdoorColorsWinter ; ROUTE_WINTER
+	dw .OutdoorColorsSpring	; TOWN_SPRING
+	dw .OutdoorColorsSpring ; TOWN_SPRING
 	assert_table_length NUM_ENVIRONMENTS + 1
 
 ; Valid indices: $00 - $29 (see gfx/tilesets/bg_tiles.pal)
@@ -35,3 +41,9 @@ EnvironmentColorsPointers:
 	db $08, $09, $0a, $0b, $0c, $0d, $0e, $0f ; day
 	db $10, $11, $12, $13, $14, $15, $16, $17 ; nite
 	db $18, $19, $1a, $1b, $1c, $1d, $1e, $1f ; dark
+	
+.OutdoorColorsFall:
+
+.OutdoorColorsWinter:
+
+.OutdoorColorsSpring:

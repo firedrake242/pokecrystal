@@ -27,6 +27,12 @@ MAP_LENGTH EQU _RS
 	const ENVIRONMENT_5
 	const GATE
 	const DUNGEON
+	const TOWN_FALL
+	const ROUTE_FALL
+	const TOWN_WINTER
+	const ROUTE_WINTER
+	const TOWN_SPRING
+	const ROUTE_SPRING
 NUM_ENVIRONMENTS EQU const_value - 1
 
 ; map palettes (wEnvironment)
