@@ -484,3 +484,11 @@ SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/Route26_Fall.asm"
+INCLUDE "maps/Route27_Fall.asm"
+INCLUDE "maps/Route29_Fall.asm"
+INCLUDE "maps/NewBarkTown_Fall.asm"
+INCLUDE "maps/Route26_Winter.asm"
+INCLUDE "maps/Route27_Winter.asm"
+INCLUDE "maps/Route29_Winter.asm"
+INCLUDE "maps/NewBarkTown_Winter.asm"

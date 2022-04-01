@@ -99,6 +99,14 @@ ENDM
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, WEST | EAST
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
+	
+	map_attributes NewBarkTown_Fall, NEW_BARK_TOWN_FALL, $05, WEST | EAST
+	connection west, Route29_Fall, ROUTE_29_FALL, 0
+	connection east, Route27_Fall, ROUTE_27_FALL, 0
+	
+	map_attributes NewBarkTown_Winter, NEW_BARK_TOWN_WINTER, $05, WEST | EAST
+	connection west, Route29_Winter, ROUTE_29_WINTER, 0
+	connection east, Route27_Winter, ROUTE_27_WINTER, 0
 
 	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
 	connection north, Route30, ROUTE_30, 5
@@ -146,11 +154,25 @@ ENDM
 
 	map_attributes Route26, ROUTE_26, $05, WEST
 	connection west, Route27, ROUTE_27, 45
+	
+	map_attributes Route26_Fall, ROUTE_26_FALL, $05, WEST
+	connection west, Route27_Fall, ROUTE_27_FALL, 45
+	
+	map_attributes Route26_Winter, ROUTE_26_WINTER, $05, WEST
+	connection west, Route27_Winter, ROUTE_27_WINTER, 45
 
 	map_attributes Route27, ROUTE_27, $35, WEST | EAST
 	connection west, NewBarkTown, NEW_BARK_TOWN, 0
 	connection east, Route26, ROUTE_26, -45
-
+	
+	map_attributes Route27_Fall, ROUTE_27_FALL, $35, WEST | EAST
+	connection west, NewBarkTown_Fall, NEW_BARK_TOWN_FALL, 0
+	connection east, Route26_Fall, ROUTE_26_FALL, -45
+	
+	map_attributes Route27_Winter, ROUTE_27_WINTER, $35, WEST | EAST
+	connection west, NewBarkTown_Winter, NEW_BARK_TOWN_WINTER, 0
+	connection east, Route26_Winter, ROUTE_26_WINTER, -45
+	
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -9
 
@@ -158,6 +180,11 @@ ENDM
 	connection north, Route46, ROUTE_46, 10
 	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
+	
+	map_attributes Route29_Fall, ROUTE_29_FALL, $05, NORTH | WEST | EAST
+	connection north, Route46, ROUTE_46, 10
+	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0
+	connection east, NewBarkTown_Fall, NEW_BARK_TOWN_FALL, 0
 
 	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -10
