@@ -1269,7 +1269,16 @@ LoadMapPals:
 	cp TOWN
 	jr z, .outside
 	cp ROUTE
+	jr z, .outside
+	cp TOWN_FALL
+	jr z, .outside
+	cp ROUTE_FALL
+	jr z, .outside
+	cp TOWN_WINTER
+	jr z, .outside
+	cp ROUTE_WINTER
 	ret nz
+	
 .outside
 	ld a, [wMapGroup]
 	ld l, a

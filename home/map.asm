@@ -379,7 +379,16 @@ CheckOutdoorMap::
 	cp ROUTE
 	ret z
 	cp TOWN
-	ret
+	ret z
+	cp ROUTE_FALL
+	ret z
+	cp TOWN_FALL
+	ret z
+	cp ROUTE_WINTER
+	ret z
+	cp TOWN_WINTER
+	ret z
+
 
 CheckIndoorMap::
 	cp INDOOR

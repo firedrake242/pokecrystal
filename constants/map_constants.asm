@@ -467,6 +467,14 @@ ENDM
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
+	map_const ROUTE_26_FALL,                               10, 54 ; 14
+	map_const ROUTE_27_FALL,                               40,  9 ; 15 
+	map_const ROUTE_29_FALL,                               30,  9 ; 16 
+	map_const NEW_BARK_TOWN_FALL,                          10,  9 ; 17
+	map_const ROUTE_26_WINTER,                             10, 54 ; 18
+	map_const ROUTE_27_WINTER,                             40,  9 ; 19 
+	map_const ROUTE_29_WINTER,                             30,  9 ; 20 
+	map_const NEW_BARK_TOWN_WINTER,                        10,  9 ; 21
 	endgroup
 
 	newgroup SAFFRON                                              ; 25
