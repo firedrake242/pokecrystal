@@ -182,9 +182,10 @@ ENDM
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
 	
 	map_attributes Route29_Fall, ROUTE_29_FALL, $05, NORTH | WEST | EAST
-	connection north, Route46, ROUTE_46, 10
-	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0
 	connection east, NewBarkTown_Fall, NEW_BARK_TOWN_FALL, 0
+	
+	map_attributes Route29_Winter, ROUTE_29_WINTER, $05, NORTH | WEST | EAST
+	connection east, NewBarkTown_Winter, NEW_BARK_TOWN_WINTER, 0
 
 	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
 	connection north, Route31, ROUTE_31, -10
