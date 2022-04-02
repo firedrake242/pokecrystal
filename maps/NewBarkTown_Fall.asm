@@ -1,9 +1,9 @@
 	object_const_def
-	const NEWBARKTOWN_TEACHER
-	const NEWBARKTOWN_FISHER
-	const NEWBARKTOWN_SILVER
+	const NEWBARKTOWNF_TEACHER
+	const NEWBARKTOWNF_FISHER
+	const NEWBARKTOWNF_SILVER
 
-NewBarkTown_MapScripts:
+NewBarkTown_MapScripts_F:
 	def_scene_scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
@@ -11,32 +11,32 @@ NewBarkTown_MapScripts:
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
-.DummyScene0:
+.DummyScene0_F:
 	end
 
-.DummyScene1:
+.DummyScene1_F:
 	end
 
-.FlyPoint:
+.FlyPoint_F:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	endcallback
 
-NewBarkTown_TeacherStopsYouScene1:
+NewBarkTown_TeacherStopsYouScene1_F:
 	playmusic MUSIC_MOM
-	turnobject NEWBARKTOWN_TEACHER, LEFT
+	turnobject NEWBARKTOWNF_TEACHER, LEFT
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
 	closetext
 	turnobject PLAYER, RIGHT
-	applymovement NEWBARKTOWN_TEACHER, NewBarkTown_TeacherRunsToYouMovement1
+	applymovement NEWBARKTOWNF_TEACHER, NewBarkTown_TeacherRunsToYouMovement1
 	opentext
 	writetext Text_WhatDoYouThinkYoureDoing
 	waitbutton
 	closetext
-	follow NEWBARKTOWN_TEACHER, PLAYER
-	applymovement NEWBARKTOWN_TEACHER, NewBarkTown_TeacherBringsYouBackMovement1
+	follow NEWBARKTOWNF_TEACHER, PLAYER
+	applymovement NEWBARKTOWNF_TEACHER, NewBarkTown_TeacherBringsYouBackMovement1
 	stopfollow
 	opentext
 	writetext Text_ItsDangerousToGoAlone
@@ -45,22 +45,22 @@ NewBarkTown_TeacherStopsYouScene1:
 	special RestartMapMusic
 	end
 
-NewBarkTown_TeacherStopsYouScene2:
+NewBarkTown_TeacherStopsYouScene2_F:
 	playmusic MUSIC_MOM
-	turnobject NEWBARKTOWN_TEACHER, LEFT
+	turnobject NEWBARKTOWNF_TEACHER, LEFT
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
 	closetext
 	turnobject PLAYER, RIGHT
-	applymovement NEWBARKTOWN_TEACHER, NewBarkTown_TeacherRunsToYouMovement2
+	applymovement NEWBARKTOWNF_TEACHER, NewBarkTown_TeacherRunsToYouMovement2
 	turnobject PLAYER, UP
 	opentext
 	writetext Text_WhatDoYouThinkYoureDoing
 	waitbutton
 	closetext
-	follow NEWBARKTOWN_TEACHER, PLAYER
-	applymovement NEWBARKTOWN_TEACHER, NewBarkTown_TeacherBringsYouBackMovement2
+	follow NEWBARKTOWNF_TEACHER, PLAYER
+	applymovement NEWBARKTOWNF_TEACHER, NewBarkTown_TeacherBringsYouBackMovement2
 	stopfollow
 	opentext
 	writetext Text_ItsDangerousToGoAlone
@@ -69,7 +69,7 @@ NewBarkTown_TeacherStopsYouScene2:
 	special RestartMapMusic
 	end
 
-NewBarkTownTeacherScript:
+NewBarkTownTeacherScript_F:
 	faceplayer
 	opentext
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
@@ -83,68 +83,68 @@ NewBarkTownTeacherScript:
 	closetext
 	end
 
-.MonIsAdorable:
+.MonIsAdorable_F:
 	writetext Text_YourMonIsAdorable
 	waitbutton
 	closetext
 	end
 
-.TellMomYoureLeaving:
+.TellMomYoureLeaving_F:
 	writetext Text_TellMomIfLeaving
 	waitbutton
 	closetext
 	end
 
-.CallMom:
+.CallMom_F:
 	writetext Text_CallMomOnGear
 	waitbutton
 	closetext
 	end
 
-NewBarkTownFisherScript:
+NewBarkTownFisherScript_F:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
 
-NewBarkTownSilverScript:
+NewBarkTownSilverScript_F:
 	opentext
 	writetext NewBarkTownRivalText1
 	waitbutton
 	closetext
-	turnobject NEWBARKTOWN_SILVER, LEFT
+	turnobject NEWBARKTOWNF_SILVER, LEFT
 	opentext
 	writetext NewBarkTownRivalText2
 	waitbutton
 	closetext
-	follow PLAYER, NEWBARKTOWN_SILVER
+	follow PLAYER, NEWBARKTOWNF_SILVER
 	applymovement PLAYER, NewBarkTown_SilverPushesYouAwayMovement
 	stopfollow
 	pause 5
-	turnobject NEWBARKTOWN_SILVER, DOWN
+	turnobject NEWBARKTOWNF_SILVER, DOWN
 	pause 5
 	playsound SFX_TACKLE
 	applymovement PLAYER, NewBarkTown_SilverShovesYouOutMovement
-	applymovement NEWBARKTOWN_SILVER, NewBarkTown_SilverReturnsToTheShadowsMovement
+	applymovement NEWBARKTOWNF_SILVER, NewBarkTown_SilverReturnsToTheShadowsMovement
 	end
 
-NewBarkTownSign:
+NewBarkTownSign_F:
 	jumptext NewBarkTownSignText
 
-NewBarkTownPlayersHouseSign:
+NewBarkTownPlayersHouseSign_F:
 	jumptext NewBarkTownPlayersHouseSignText
 
-NewBarkTownElmsLabSign:
+NewBarkTownElmsLabSign_F:
 	jumptext NewBarkTownElmsLabSignText
 
-NewBarkTownElmsHouseSign:
+NewBarkTownElmsHouseSign_F:
 	jumptext NewBarkTownElmsHouseSignText
 
-NewBarkTown_TeacherRunsToYouMovement1:
+NewBarkTown_TeacherRunsToYouMovement1_F:
 	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
 	step_end
 
-NewBarkTown_TeacherRunsToYouMovement2:
+NewBarkTown_TeacherRunsToYouMovement2_F:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -153,7 +153,7 @@ NewBarkTown_TeacherRunsToYouMovement2:
 	turn_head DOWN
 	step_end
 
-NewBarkTown_TeacherBringsYouBackMovement1:
+NewBarkTown_TeacherBringsYouBackMovement1_F:
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -161,7 +161,7 @@ NewBarkTown_TeacherBringsYouBackMovement1:
 	turn_head LEFT
 	step_end
 
-NewBarkTown_TeacherBringsYouBackMovement2:
+NewBarkTown_TeacherBringsYouBackMovement2_F:
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -170,23 +170,23 @@ NewBarkTown_TeacherBringsYouBackMovement2:
 	turn_head LEFT
 	step_end
 
-NewBarkTown_SilverPushesYouAwayMovement:
+NewBarkTown_SilverPushesYouAwayMovement_F:
 	turn_head UP
 	step DOWN
 	step_end
 
-NewBarkTown_SilverShovesYouOutMovement:
+NewBarkTown_SilverShovesYouOutMovement_F:
 	turn_head UP
 	fix_facing
 	jump_step DOWN
 	remove_fixed_facing
 	step_end
 
-NewBarkTown_SilverReturnsToTheShadowsMovement:
+NewBarkTown_SilverReturnsToTheShadowsMovement_F:
 	step RIGHT
 	step_end
 
-Text_GearIsImpressive:
+Text_GearIsImpressive_F:
 	text "Wow, your #GEAR"
 	line "is impressive!"
 
@@ -194,16 +194,16 @@ Text_GearIsImpressive:
 	line "it for you?"
 	done
 
-Text_WaitPlayer:
+Text_WaitPlayer_F:
 	text "Wait, <PLAY_G>!"
 	done
 
-Text_WhatDoYouThinkYoureDoing:
+Text_WhatDoYouThinkYoureDoing_F:
 	text "What do you think"
 	line "you're doing?"
 	done
 
-Text_ItsDangerousToGoAlone:
+Text_ItsDangerousToGoAlone_F:
 	text "It's dangerous to"
 	line "go out without a"
 	cont "#MON!"
@@ -215,13 +215,13 @@ Text_ItsDangerousToGoAlone:
 	line "to the next town."
 	done
 
-Text_YourMonIsAdorable:
+Text_YourMonIsAdorable_F:
 	text "Oh! Your #MON"
 	line "is adorable!"
 	cont "I wish I had one!"
 	done
 
-Text_TellMomIfLeaving:
+Text_TellMomIfLeaving_F:
 	text "Hi, <PLAY_G>!"
 	line "Leaving again?"
 
@@ -230,7 +230,7 @@ Text_TellMomIfLeaving:
 	cont "are leaving."
 	done
 
-Text_CallMomOnGear:
+Text_CallMomOnGear_F:
 	text "Call your mom on"
 	line "your #GEAR to"
 
@@ -238,7 +238,7 @@ Text_CallMomOnGear:
 	line "you're doing."
 	done
 
-Text_ElmDiscoveredNewMon:
+Text_ElmDiscoveredNewMon_F:
 	text "Yo, <PLAYER>!"
 
 	para "I hear PROF.ELM"
@@ -246,7 +246,7 @@ Text_ElmDiscoveredNewMon:
 	cont "new #MON."
 	done
 
-NewBarkTownRivalText1:
+NewBarkTownRivalText1_F:
 	text "<……>"
 
 	para "So this is the"
@@ -254,12 +254,12 @@ NewBarkTownRivalText1:
 	cont "LAB…"
 	done
 
-NewBarkTownRivalText2:
+NewBarkTownRivalText2_F:
 	text "…What are you"
 	line "staring at?"
 	done
 
-NewBarkTownSignText:
+NewBarkTownSignText_F:
 	text "NEW BARK TOWN"
 
 	para "The Town Where the"
@@ -267,19 +267,19 @@ NewBarkTownSignText:
 	cont "Beginning Blow"
 	done
 
-NewBarkTownPlayersHouseSignText:
+NewBarkTownPlayersHouseSignText_F:
 	text "<PLAYER>'s House"
 	done
 
-NewBarkTownElmsLabSignText:
+NewBarkTownElmsLabSignText_F:
 	text "ELM #MON LAB"
 	done
 
-NewBarkTownElmsHouseSignText:
+NewBarkTownElmsHouseSignText_F:
 	text "ELM'S HOUSE"
 	done
 
-NewBarkTown_MapEvents:
+NewBarkTown_MapEvents_F:
 	db 0, 0 ; filler
 
 	def_warp_events
