@@ -1,4 +1,4 @@
-NewBarkTown_MapScripts_F:
+NewBarkTown_Fall_MapScripts:
 	def_scene_scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
@@ -6,30 +6,30 @@ NewBarkTown_MapScripts_F:
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
-.DummyScene0_F:
+.DummyScene0:
 	end
 
-.DummyScene1_F:
+.DummyScene1:
 	end
 
-.FlyPoint_F:
+.FlyPoint:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	endcallback
 
-NewBarkTownSign_F:
-	jumptext NewBarkTownSignText
+NewBarkTown_FallSign:
+	jumptext NewBarkTown_FallSignText
 
-NewBarkTownPlayersHouseSign_F:
-	jumptext NewBarkTownPlayersHouseSignText
+NewBarkTown_FallPlayersHouseSign:
+	jumptext NewBarkTown_FallPlayersHouseSignText
 
-NewBarkTownElmsLabSign_F:
-	jumptext NewBarkTownElmsLabSignText
+NewBarkTown_FallElmsLabSign:
+	jumptext NewBarkTown_FallElmsLabSignText
 
-NewBarkTownElmsHouseSign_F:
-	jumptext NewBarkTownElmsHouseSignText
+NewBarkTown_FallElmsHouseSign:
+	jumptext NewBarkTown_FallElmsHouseSignText
 
 
-NewBarkTownSignText_F:
+NewBarkTown_FallSignText:
 	text "NEW BARK TOWN"
 
 	para "The Town Where the"
@@ -37,19 +37,19 @@ NewBarkTownSignText_F:
 	cont "Beginning Blow"
 	done
 
-NewBarkTownPlayersHouseSignText_F:
+NewBarkTown_FallPlayersHouseSignText:
 	text "<PLAYER>'s House"
 	done
 
-NewBarkTownElmsLabSignText_F:
+NewBarkTown_FallElmsLabSignText:
 	text "ELM #MON LAB"
 	done
 
-NewBarkTownElmsHouseSignText_F:
+NewBarkTown_FallElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
-NewBarkTown_MapEvents_F:
+NewBarkTown_Fall_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
@@ -59,9 +59,9 @@ NewBarkTown_MapEvents_F:
 	warp_event 11, 13, ELMS_HOUSE, 1
 
 	def_bg_events
-	bg_event  8,  8, BGEVENT_READ, NewBarkTownSign_F
-	bg_event 11,  5, BGEVENT_READ, NewBarkTownPlayersHouseSign_F
-	bg_event  3,  3, BGEVENT_READ, NewBarkTownElmsLabSign_F
-	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign_F
+	bg_event  8,  8, BGEVENT_READ, NewBarkTown_FallSign
+	bg_event 11,  5, BGEVENT_READ, NewBarkTown_FallPlayersHouseSign
+	bg_event  3,  3, BGEVENT_READ, NewBarkTown_FallElmsLabSign
+	bg_event  9, 13, BGEVENT_READ, NewBarkTown_FallElmsHouseSign
 
 

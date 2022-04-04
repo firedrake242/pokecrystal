@@ -111,6 +111,7 @@ ROMX $23
 ROMX $24
 	"bank24"
 ROMX $25
+	"Maps"
 	"Events"
 ROMX $26
 	"Map Scripts 11"
@@ -279,7 +280,7 @@ ROMX $6c
 	"Phone Text 2"
 	"Map Scripts 25"
 ROMX $6d
-	"Map Scripts 26"
+	"Special Phone Text"
 ROMX $6e
 	"Pokedex Entries 065-128"
 ROMX $6f
@@ -315,10 +316,6 @@ ROMX $7e
 ROMX $7f
 	org $7de0
 	"Stadium 2 Checksums"
-ROMX $80
-	"Maps"
-ROMX $81
-	"Special Phone Text"
 WRAM0
 	"Stack"
 	"Audio RAM"
