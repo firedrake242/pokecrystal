@@ -18,10 +18,8 @@ MomPhoneCalleeScript:
 	readvar VAR_ENVIRONMENT
 	ifequal TOWN, MomPhoneInTown
 	ifequal TOWN_FALL, MomPhoneInTown
-	ifequal TOWN_WINTER, MomPhoneInTown
 	ifequal ROUTE, MomPhoneOnRoute
 	ifequal ROUTE_FALL, MomPhoneOnRoute
-	ifequal ROUTE_WINTER, MomPhoneOnRoute
 	sjump MomPhoneOther
 
 MomPhoneLandmark:

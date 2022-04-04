@@ -384,10 +384,6 @@ CheckOutdoorMap::
 	ret z
 	cp TOWN_FALL
 	ret z
-	cp ROUTE_WINTER
-	ret z
-	cp TOWN_WINTER
-	ret z
 
 
 CheckIndoorMap::

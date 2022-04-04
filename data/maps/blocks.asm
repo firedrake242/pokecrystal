@@ -1048,26 +1048,6 @@ GoldenrodDeptStoreRoof_Blocks:
 
 SECTION "Map Blocks 4", ROMX
 
-Route26_Fall_Blocks:
-	INCBIN "maps/Route26_Fall.ablk"
-
-Route27_Fall_Blocks:
-	INCBIN "maps/Route27_Fall.ablk"
-	
-Route29_Fall_Blocks:
-	INCBIN "maps/Route29_Fall.ablk"
-	
 NewBarkTown_Fall_Blocks:
 	INCBIN "maps/NewBarkTown_Fall.ablk"
-
-Route26_Winter_Blocks:
-	INCBIN "maps/Route26_Winter.ablk"
-
-Route27_Winter_Blocks:
-	INCBIN "maps/Route27_Winter.ablk"
 	
-Route29_Winter_Blocks:
-	INCBIN "maps/Route29_Winter.ablk"
-	
-NewBarkTown_Winter_Blocks:
-	INCBIN "maps/NewBarkTown_Winter.ablk"
