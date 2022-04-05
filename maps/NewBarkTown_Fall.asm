@@ -57,6 +57,7 @@ NewBarkTown_Fall_MapEvents:
 	warp_event 13,  5, PLAYERS_HOUSE_1F, 1
 	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11, 13, ELMS_HOUSE, 1
+	warp_event 17,  3, NEW_BARK_TOWN, 1
 
 	def_bg_events
 	bg_event  8,  8, BGEVENT_READ, NewBarkTown_FallSign
