@@ -12,6 +12,18 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
+	cp TILESET_JOHTO
+	jr z, .season
+	cp TILESET_JOHTO_MODERN
+	jr z, .season
+	cp TILESET_KANTO
+	jr z, .season
+	cp TILESET_PARK
+	jr z, .season
+	cp TILESET_FOREST
+	jr z, .season
+	cp TILESET_PORT
+	jr z, .season
 	jr .do_nothing
 
 .pokecom_2f
@@ -47,6 +59,75 @@ LoadSpecialMapPalette:
 	call LoadMansionPalette
 	scf
 	ret
+		
+.season
+	ld a, [wEnvironment]
+	cp ROUTE_FALL
+	jr z, .LoadFallPalette
+	cp ROUTE_WINTER
+	jr z, .LoadWinterPalette
+	cp TOWN_FALL
+	jr z, .LoadFallPalette
+	cp TOWN_WINTER
+	jr z, .LoadWinterPalette
+	and a
+	ret
+
+.LoadFallPalette
+	ld a, [wTimeOfDay]
+	and $7
+	cp NITE_F
+	jr z, .LoadFallNitePalette
+	cp DAY_F
+	jr z, .LoadFallDayPalette
+	call LoadFallMornPalette
+	scf
+	ret
+	
+.LoadWinterPalette
+	ld a, [wTimeOfDay]
+	and $7
+	cp NITE_F
+	jr z, .LoadWinterNitePalette
+	cp DAY_F
+	jr z, .LoadWinterDayPalette
+	call LoadWinterMornPalette
+	scf
+	ret
+	
+
+	
+.LoadFallNitePalette
+	call LoadFallNitePalette
+	scf
+	ret
+	
+.LoadFallDayPalette
+	call LoadFallDayPalette
+	scf
+	ret
+	
+.LoadFallMornPalette
+	call LoadFallMornPalette
+	scf
+	ret
+	
+.LoadWinterNitePalette
+	call LoadWinterNitePalette
+	scf
+	ret
+	
+.LoadWinterDayPalette
+	call LoadWinterDayPalette
+	scf
+	ret
+	
+.LoadWinterMornPalette
+	call LoadWinterMornPalette
+	scf
+	ret
+	
+	
 
 .do_nothing
 	and a
@@ -135,3 +216,72 @@ LoadMansionPalette:
 
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
+
+LoadFallDayPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, FallDayPalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+FallDayPalette:
+INCLUDE "gfx/tilesets/fall_day.pal"
+
+LoadFallNitePalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, FallNitePalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+FallNitePalette:
+INCLUDE "gfx/tilesets/fall_nite.pal"
+
+LoadFallMornPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, FallMornPalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+FallMornPalette:
+INCLUDE "gfx/tilesets/fall_morn.pal"
+
+LoadWinterDayPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, WinterDayPalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+WinterDayPalette:
+INCLUDE "gfx/tilesets/winter_day.pal"
+
+LoadWinterNitePalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, WinterNitePalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+WinterNitePalette:
+INCLUDE "gfx/tilesets/winter_nite.pal"
+
+LoadWinterMornPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, WinterMornPalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+WinterMornPalette:
+INCLUDE "gfx/tilesets/winter_morn.pal"
+
+
+
