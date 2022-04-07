@@ -12,14 +12,20 @@ clc, clear
 % Fall Grass: C0EE58
 % Roof 1N: 636B4A
 % Roof 2N: 4A6318
-C1= double([0x7B, 0x73, 0xC6]);
+C1= double([0x7B, 0x73, 0xC6]);       
 C2= double([0xFF,0xFF,0xFF]);
+% define the two numbers using hexadecimal values then convert to decimal
 t = .01;
+% define the distance; larger means closer to C2, smaller closer to C1
 C3 = BlendColorValue(C1,C2,t);
+% run the function to generate C3
 C3 = floor(C3)
-
+% round C3 down to the nearest integer
 hexC3 = [];
 for k = 1:3
     hexC3 = [hexC3, dec2hex(C3(k))];
 end
+% messy way to make matlab convert the number back to a hex value if I need
+% it
 hexC3
+% prints the hex string to the command window
