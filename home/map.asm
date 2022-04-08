@@ -383,7 +383,7 @@ CheckOutdoorMap::
 	cp ROUTE_FALL
 	ret z
 	cp TOWN_FALL
-	ret z
+	ret
 
 
 CheckIndoorMap::
