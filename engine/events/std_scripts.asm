@@ -56,6 +56,7 @@ StdScripts::
 	add_stdscript PCScript
 	add_stdscript GameCornerCoinVendorScript
 	add_stdscript HappinessCheckScript
+	add_stdscript ShrineScript
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -1895,3 +1896,55 @@ Movement_ContestResults_WalkAfterWarp:
 	step DOWN
 	turn_head UP
 	step_end
+
+ShrineScript:
+	faceplayer
+	opentext
+	farwritetext ShrineText1
+	yesorno
+	iffalse .No
+	farwritetext ShrineText2
+	loadmenu .ShrineMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1,   .Fall
+	ifequal 2, .Winter
+	ifequal 3, .Spring
+	ifequal 4, .Summer
+	end
+	
+.ShrineMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y - 0
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 5 ; items
+	db "FALL@"
+	db "WINTER@"
+	db "SPRING@"
+	db "SUMMER@"
+	db "CANCEL@"
+
+.Fall:
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp NEW_BARK_TOWN_FALL, 17,3
+	end
+
+.Winter:
+.Spring:
+.Summer:
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp NEW_BARK_TOWN, 17,3
+	end	
+
+.No:
+	closetext
+	end
+	
