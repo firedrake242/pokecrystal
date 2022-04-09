@@ -484,5 +484,5 @@ SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
-INCLUDE "maps/NewBarkTown_Fall.asm"
+INCLUDE "maps/NewBarkTownFall.asm"
 

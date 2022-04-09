@@ -1048,6 +1048,6 @@ GoldenrodDeptStoreRoof_Blocks:
 
 SECTION "Map Blocks 4", ROMX
 
-NewBarkTown_Fall_Blocks:
-	INCBIN "maps/NewBarkTown_Fall.ablk"
+NewBarkTownFall_Blocks:
+	INCBIN "maps/NewBarkTownFall.ablk"
 	

@@ -157,13 +157,13 @@ AzaleaTownCelebiScene:
 	opentext
 	writetext AzaleaTownKurtText1
 	promptbutton
-	turnobject AZALEATOWN_KURT_OUTSIDE, RIGHT
+	turnobject AZALEATOWN_KURT, RIGHT
 	writetext AzaleaTownKurtText2
 	promptbutton
 	writetext AzaleaTownKurtText3
 	waitbutton
 	verbosegiveitem GS_BALL
-	turnobject AZALEATOWN_KURT_OUTSIDE, LEFT
+	turnobject AZALEATOWN_KURT, LEFT
 	setflag ENGINE_FOREST_IS_RESTLESS
 	clearevent EVENT_ILEX_FOREST_LASS
 	setevent EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
@@ -176,7 +176,7 @@ AzaleaTownKurtScript:
 	opentext
 	writetext AzaleaTownKurtText3
 	waitbutton
-	turnobject AZALEATOWN_KURT_OUTSIDE, LEFT
+	turnobject AZALEATOWN_KURT, LEFT
 	closetext
 	end
 

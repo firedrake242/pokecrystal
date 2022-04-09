@@ -100,7 +100,7 @@ ENDM
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
 	
-	map_attributes NewBarkTown_Fall, NEW_BARK_TOWN_FALL, $05, WEST | EAST
+	map_attributes NewBarkTownFall, NEW_BARK_TOWN_FALL, $05, WEST | EAST
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
 	
