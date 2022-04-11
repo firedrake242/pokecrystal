@@ -54,7 +54,22 @@ NewBarkTownFallElmsHouseSignText:
 
 NewBarkTownFallShrine:
 	jumpstd ShrineScript
-
+	ifequal 1,   .Fall
+	ifequal 2, .Winter
+	ifequal 3, .Spring
+	ifequal 4, .Summer
+	
+.Fall:
+	warp NEW_BARK_TOWN_FALL, 17,3
+	end
+.Winter:
+.Spring:
+.Summer:
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
+	warp NEW_BARK_TOWN, 17,3
+	end	
 	
 NewBarkTownFall_MapEvents:
 	db 0, 0 ; filler

@@ -1908,10 +1908,9 @@ ShrineScript:
 	loadmenu .ShrineMenuHeader
 	verticalmenu
 	closewindow
-	ifequal 1,   .Fall
-	ifequal 2, .Winter
-	ifequal 3, .Spring
-	ifequal 4, .Summer
+	playsound SFX_WARP_TO
+	special FadeOutPalettes
+	waitsfx
 	end
 	
 .ShrineMenuHeader:
@@ -1927,24 +1926,7 @@ ShrineScript:
 	db "WINTER@"
 	db "SPRING@"
 	db "SUMMER@"
-	db "CANCEL@"
-	
-.Fall:
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
-	warp NEW_BARK_TOWN_FALL, 17,3
-	end
-
-.Winter:
-.Spring:
-.Summer:
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
-	warp NEW_BARK_TOWN, 17,3
-	end	
-	
+	db "CANCEL@"	
 .No:
 	closetext
 	end
