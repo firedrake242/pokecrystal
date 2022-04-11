@@ -85,7 +85,7 @@ MoveGrammar:
 	db CLAMP
 	db CONSTRICT
 	db POISON_GAS
-	db BUBBLE
+	db SCALD
 	db SLASH
 	db SPIDER_WEB
 	db NIGHTMARE
