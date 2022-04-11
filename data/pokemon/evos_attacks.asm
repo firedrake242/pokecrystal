@@ -122,7 +122,7 @@ SquirtleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, TAIL_WHIP
-	db 7, BUBBLE
+	db 7, SCALD
 	db 10, WITHDRAW
 	db 13, WATER_GUN
 	db 18, BITE
@@ -138,9 +138,9 @@ WartortleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
-	db 1, BUBBLE
+	db 1, SCALD
 	db 4, TAIL_WHIP
-	db 7, BUBBLE
+	db 7, SCALD
 	db 10, WITHDRAW
 	db 13, WATER_GUN
 	db 19, BITE
@@ -155,10 +155,10 @@ BlastoiseEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
-	db 1, BUBBLE
+	db 1, SCALD
 	db 1, WITHDRAW
 	db 4, TAIL_WHIP
-	db 7, BUBBLE
+	db 7, SCALD
 	db 10, WITHDRAW
 	db 13, WATER_GUN
 	db 19, BITE
@@ -806,7 +806,7 @@ ArcanineEvosAttacks:
 PoliwagEvosAttacks:
 	db EVOLVE_LEVEL, 25, POLIWHIRL
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 7, HYPNOSIS
 	db 13, WATER_GUN
 	db 19, DOUBLESLAP
@@ -820,7 +820,7 @@ PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
 	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 1, HYPNOSIS
 	db 1, WATER_GUN
 	db 7, HYPNOSIS
@@ -1350,7 +1350,7 @@ HypnoEvosAttacks:
 KrabbyEvosAttacks:
 	db EVOLVE_LEVEL, 28, KINGLER
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 5, LEER
 	db 12, VICEGRIP
 	db 16, HARDEN
@@ -1362,7 +1362,7 @@ KrabbyEvosAttacks:
 
 KinglerEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 1, LEER
 	db 1, VICEGRIP
 	db 5, LEER
@@ -1604,7 +1604,7 @@ KangaskhanEvosAttacks:
 HorseaEvosAttacks:
 	db EVOLVE_LEVEL, 32, SEADRA
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 8, SMOKESCREEN
 	db 15, LEER
 	db 22, WATER_GUN
@@ -1616,7 +1616,7 @@ HorseaEvosAttacks:
 SeadraEvosAttacks:
 	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 1, SMOKESCREEN
 	db 1, LEER
 	db 1, WATER_GUN
@@ -2353,7 +2353,7 @@ CrobatEvosAttacks:
 ChinchouEvosAttacks:
 	db EVOLVE_LEVEL, 27, LANTURN
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 1, THUNDER_WAVE
 	db 5, SUPERSONIC
 	db 13, FLAIL
@@ -2366,7 +2366,7 @@ ChinchouEvosAttacks:
 
 LanturnEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 1, THUNDER_WAVE
 	db 1, SUPERSONIC
 	db 5, SUPERSONIC
@@ -3018,7 +3018,7 @@ CorsolaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 7, HARDEN
-	db 13, BUBBLE
+	db 13, SCALD
 	db 19, RECOVER
 	db 25, BUBBLEBEAM
 	db 31, SPIKE_CANNON
@@ -3070,7 +3070,7 @@ DelibirdEvosAttacks:
 MantineEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, BUBBLE
+	db 1, SCALD
 	db 10, SUPERSONIC
 	db 18, BUBBLEBEAM
 	db 25, TAKE_DOWN
@@ -3119,7 +3119,7 @@ HoundoomEvosAttacks:
 
 KingdraEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BUBBLE
+	db 1, SCALD
 	db 1, SMOKESCREEN
 	db 1, LEER
 	db 1, WATER_GUN

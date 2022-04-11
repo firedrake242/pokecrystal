@@ -840,9 +840,9 @@ TransformDescription:
 	db   "The user assumes"
 	next "the foe's guise.@"
 
-BubbleDescription:
-	db   "An attack that may"
-	next "reduce SPEED.@"
+ScaldDescription:
+	db   "Boiling water that"
+	next "may burn target.@"
 
 DizzyPunchDescription:
 	db   "An attack that may"

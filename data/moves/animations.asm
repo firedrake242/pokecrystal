@@ -146,7 +146,7 @@ BattleAnimations::
 	dw BattleAnim_LovelyKiss
 	dw BattleAnim_SkyAttack
 	dw BattleAnim_Transform
-	dw BattleAnim_Bubble
+	dw BattleAnim_Scald
 	dw BattleAnim_DizzyPunch
 	dw BattleAnim_Spore
 	dw BattleAnim_Flash
@@ -1027,20 +1027,6 @@ BattleAnim_Blizzard:
 	anim_wait 24
 	anim_ret
 
-BattleAnim_Bubble:
-	anim_1gfx ANIM_GFX_BUBBLE
-	anim_sound 32, 2, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BUBBLE, 64, 92, $c1
-	anim_wait 6
-	anim_sound 32, 2, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BUBBLE, 64, 92, $e1
-	anim_wait 6
-	anim_sound 32, 2, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BUBBLE, 64, 92, $d1
-	anim_wait 128
-	anim_wait 32
-	anim_ret
-
 BattleAnim_Bubblebeam:
 	anim_1gfx ANIM_GFX_BUBBLE
 .loop
@@ -1088,6 +1074,7 @@ BattleAnim_WaterGun:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_Scald:
 BattleAnim_HydroPump:
 	anim_bgeffect ANIM_BG_START_WATER, $0, BG_EFFECT_TARGET, $0
 	anim_1gfx ANIM_GFX_WATER
