@@ -144,7 +144,7 @@ MoveNames::
 	li "LOVELY KISS"
 	li "SKY ATTACK"
 	li "TRANSFORM"
-	li "BUBBLE"
+	li "SCALD"
 	li "DIZZY PUNCH"
 	li "SPORE"
 	li "FLASH"
