@@ -468,6 +468,7 @@ ENDM
 	map_const ROUTE_27_SANDSTORM_HOUSE,                     4,  4 ; 12
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
 	map_const NEW_BARK_TOWN_FALL,                          10,  9 ; 14
+	map_const NEW_BARK_TOWN_WINTER,                        10,  9 ; 15
 	endgroup
 
 	newgroup SAFFRON                                              ; 25

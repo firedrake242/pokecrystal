@@ -1,7 +1,7 @@
 	object_const_def
-	const NEWBARKTOWNFALL_SHRINE
+	const NEWBARKTOWNWINTER_SHRINE
 
-NewBarkTownFall_MapScripts:
+NewBarkTownWinter_MapScripts:
 	def_scene_scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
@@ -19,20 +19,20 @@ NewBarkTownFall_MapScripts:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	endcallback
 
-NewBarkTownFallSign:
-	jumptext NewBarkTownFallSignText
+NewBarkTownWinterSign:
+	jumptext NewBarkTownWinterSignText
 
-NewBarkTownFallPlayersHouseSign:
-	jumptext NewBarkTownFallPlayersHouseSignText
+NewBarkTownWinterPlayersHouseSign:
+	jumptext NewBarkTownWinterPlayersHouseSignText
 
-NewBarkTownFallElmsLabSign:
-	jumptext NewBarkTownFallElmsLabSignText
+NewBarkTownWinterElmsLabSign:
+	jumptext NewBarkTownWinterElmsLabSignText
 
-NewBarkTownFallElmsHouseSign:
-	jumptext NewBarkTownFallElmsHouseSignText
+NewBarkTownWinterElmsHouseSign:
+	jumptext NewBarkTownWinterElmsHouseSignText
 
 
-NewBarkTownFallSignText:
+NewBarkTownWinterSignText:
 	text "NEW BARK TOWN"
 
 	para "The Town Where the"
@@ -40,19 +40,19 @@ NewBarkTownFallSignText:
 	cont "Beginning Blow"
 	done
 
-NewBarkTownFallPlayersHouseSignText:
+NewBarkTownWinterPlayersHouseSignText:
 	text "<PLAYER>'s House"
 	done
 
-NewBarkTownFallElmsLabSignText:
+NewBarkTownWinterElmsLabSignText:
 	text "ELM #MON LAB"
 	done
 
-NewBarkTownFallElmsHouseSignText:
+NewBarkTownWinterElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
-NewBarkTownFallShrine:
+NewBarkTownWinterShrine:
 	jumpstd ShrineScript
 	ifequal 1,   .Fall
 	ifequal 2, .Winter
@@ -70,7 +70,7 @@ NewBarkTownFallShrine:
 	warp NEW_BARK_TOWN, 17,3
 	end	
 	
-NewBarkTownFall_MapEvents:
+NewBarkTownWinter_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
@@ -82,10 +82,10 @@ NewBarkTownFall_MapEvents:
 	def_coord_events
 	
 	def_bg_events
-	bg_event  8,  8, BGEVENT_READ, NewBarkTownFallSign
-	bg_event 11,  5, BGEVENT_READ, NewBarkTownFallPlayersHouseSign
-	bg_event  3,  3, BGEVENT_READ, NewBarkTownFallElmsLabSign
-	bg_event  9, 13, BGEVENT_READ, NewBarkTownFallElmsHouseSign
+	bg_event  8,  8, BGEVENT_READ, NewBarkTownWinterSign
+	bg_event 11,  5, BGEVENT_READ, NewBarkTownWinterPlayersHouseSign
+	bg_event  3,  3, BGEVENT_READ, NewBarkTownWinterElmsLabSign
+	bg_event  9, 13, BGEVENT_READ, NewBarkTownWinterElmsHouseSign
 	
 	def_object_events
-	object_event 17, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownFallShrine, -1
+	object_event 17, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownWinterShrine, -1

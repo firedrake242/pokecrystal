@@ -287,15 +287,14 @@ NewBarkTownShrine:
 	ifequal 3, .Spring
 	ifequal 4, .Summer
 	
-.Fall:
+.Winter:
 	warp NEW_BARK_TOWN_FALL, 17,3
 	end
 .Winter:
+	warp NEW_BARK_TOWN_WINTER, 17,3
+	end
 .Spring:
 .Summer:
-	playsound SFX_WARP_TO
-	special FadeOutPalettes
-	waitsfx
 	warp NEW_BARK_TOWN, 17,3
 	end	
 	
