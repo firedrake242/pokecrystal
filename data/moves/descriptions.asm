@@ -145,7 +145,7 @@ MoveDescriptions::
 	dw LovelyKissDescription
 	dw SkyAttackDescription
 	dw TransformDescription
-	dw BubbleDescription
+	dw ScaldDescription
 	dw DizzyPunchDescription
 	dw SporeDescription
 	dw FlashDescription

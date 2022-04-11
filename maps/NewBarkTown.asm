@@ -282,7 +282,7 @@ NewBarkTownElmsHouseSignText:
 
 NewBarkTownShrine:
 	jumpstd ShrineScript
-
+	
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 

@@ -57,6 +57,7 @@ StdScripts::
 	add_stdscript GameCornerCoinVendorScript
 	add_stdscript HappinessCheckScript
 	add_stdscript ShrineScript
+	
 
 PokecenterNurseScript:
 ; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
@@ -1927,7 +1928,7 @@ ShrineScript:
 	db "SPRING@"
 	db "SUMMER@"
 	db "CANCEL@"
-
+	
 .Fall:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
@@ -1943,7 +1944,7 @@ ShrineScript:
 	waitsfx
 	warp NEW_BARK_TOWN, 17,3
 	end	
-
+	
 .No:
 	closetext
 	end

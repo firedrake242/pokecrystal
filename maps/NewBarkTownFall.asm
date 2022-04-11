@@ -52,8 +52,9 @@ NewBarkTownFallElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
-NewBarkTownFallShrine:
+NewBarkTownShrine:
 	jumpstd ShrineScript
+
 	
 NewBarkTownFall_MapEvents:
 	db 0, 0 ; filler
