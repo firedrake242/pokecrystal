@@ -52,7 +52,7 @@ NewBarkTownFallElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
-NewBarkTownShrine:
+NewBarkTownFallShrine:
 	jumpstd ShrineScript
 
 	
