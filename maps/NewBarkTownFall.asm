@@ -18,9 +18,6 @@ NewBarkTownFall_MapScripts:
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	endcallback
-	
-NewBarkTownFallShrine:
-	jumpstd ShrineScript
 
 NewBarkTownFallSign:
 	jumptext NewBarkTownFallSignText
@@ -55,6 +52,9 @@ NewBarkTownFallElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
+NewBarkTownFallShrine:
+	jumpstd ShrineScript
+	
 NewBarkTownFall_MapEvents:
 	db 0, 0 ; filler
 
@@ -64,6 +64,8 @@ NewBarkTownFall_MapEvents:
 	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
 	warp_event 11, 13, ELMS_HOUSE, 1
 
+	def_coord_events
+	
 	def_bg_events
 	bg_event  8,  8, BGEVENT_READ, NewBarkTownFallSign
 	bg_event 11,  5, BGEVENT_READ, NewBarkTownFallPlayersHouseSign

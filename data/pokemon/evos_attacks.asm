@@ -336,12 +336,15 @@ ArbokEvosAttacks:
 	db 1, LEER
 	db 1, POISON_STING
 	db 1, BITE
-	db 9, POISON_STING
-	db 15, BITE
+	db 9, MIST
+	db 15, SUPER_FANG
 	db 25, GLARE
+	db 25, CONFUSE_RAY
+	db 30, SOFTBOILED
+	db 30, EGG_BOMB
 	db 33, SCREECH
-	db 43, ACID
-	db 51, HAZE
+	db 43, SLUDGE_BOMB
+	db 51, PERISH_SONG
 	db 0 ; no more level-up moves
 
 PikachuEvosAttacks:
