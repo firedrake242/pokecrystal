@@ -11,7 +11,7 @@ MoveNames::
 	li "THUNDERPUNCH"
 	li "SCRATCH"
 	li "VICEGRIP"
-	li "GUILLOTINE"
+	li "WILLOWISP"
 	li "RAZOR WIND"
 	li "SWORDS DANCE"
 	li "CUT"

@@ -498,6 +498,7 @@ VulpixEvosAttacks:
 	db 1, TAIL_WHIP
 	db 7, QUICK_ATTACK
 	db 13, ROAR
+	db 17, WILLOWISP
 	db 19, CONFUSE_RAY
 	db 21, HEX
 	db 25, SAFEGUARD
@@ -508,10 +509,15 @@ VulpixEvosAttacks:
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, EMBER
-	db 1, QUICK_ATTACK
-	db 1, CONFUSE_RAY
-	db 1, SAFEGUARD
-	db 43, FIRE_SPIN
+	db 1, TAIL_WHIP
+	db 7, QUICK_ATTACK
+	db 13, ROAR
+	db 17, WILLOWISP
+	db 19, CONFUSE_RAY
+	db 21, HEX
+	db 25, SAFEGUARD
+	db 31, FLAMETHROWER
+	db 37, FIRE_SPIN
 	db 0 ; no more level-up moves
 
 JigglypuffEvosAttacks:
@@ -1256,6 +1262,7 @@ GastlyEvosAttacks:
 	db 16, CURSE
 	db 21, NIGHT_SHADE
 	db 24, HEX
+	db 24, WILLOWISP
 	db 28, CONFUSE_RAY
 	db 33, DREAM_EATER
 	db 36, DESTINY_BOND
@@ -1272,6 +1279,7 @@ HaunterEvosAttacks:
 	db 16, CURSE
 	db 21, NIGHT_SHADE
 	db 24, HEX
+	db 24, WILLOWISP
 	db 31, CONFUSE_RAY
 	db 39, DREAM_EATER
 	db 48, DESTINY_BOND
@@ -1287,6 +1295,7 @@ GengarEvosAttacks:
 	db 16, CURSE
 	db 21, NIGHT_SHADE
 	db 24, HEX
+	db 24, WILLOWISP
 	db 31, CONFUSE_RAY
 	db 39, DREAM_EATER
 	db 48, DESTINY_BOND
@@ -1346,7 +1355,7 @@ KrabbyEvosAttacks:
 	db 12, VICEGRIP
 	db 16, HARDEN
 	db 23, STOMP
-	db 27, GUILLOTINE
+	db 27, HYPER_BEAM
 	db 34, PROTECT
 	db 41, CRABHAMMER
 	db 0 ; no more level-up moves
@@ -1360,7 +1369,7 @@ KinglerEvosAttacks:
 	db 12, VICEGRIP
 	db 16, HARDEN
 	db 23, STOMP
-	db 27, GUILLOTINE
+	db 27, HYPER_BEAM
 	db 38, PROTECT
 	db 49, CRABHAMMER
 	db 0 ; no more level-up moves
@@ -1754,7 +1763,7 @@ PinsirEvosAttacks:
 	db 13, BIND
 	db 19, SEISMIC_TOSS
 	db 25, HARDEN
-	db 31, GUILLOTINE
+	db 31, HYPER_BEAM
 	db 37, SUBMISSION
 	db 43, SWORDS_DANCE
 	db 0 ; no more level-up moves
@@ -2808,7 +2817,7 @@ GligarEvosAttacks:
 	db 28, FAINT_ATTACK
 	db 36, SLASH
 	db 44, SCREECH
-	db 52, GUILLOTINE
+	db 52, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 SteelixEvosAttacks:
