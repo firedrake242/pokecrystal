@@ -287,7 +287,7 @@ NewBarkTownShrine:
 	ifequal 3, .Spring
 	ifequal 4, .Summer
 	
-.Winter:
+.Fall:
 	warp NEW_BARK_TOWN_FALL, 17,3
 	end
 .Winter:

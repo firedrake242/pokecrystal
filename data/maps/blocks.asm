@@ -1051,3 +1051,6 @@ SECTION "Map Blocks 4", ROMX
 NewBarkTownFall_Blocks:
 	INCBIN "maps/NewBarkTownFall.ablk"
 	
+NewBarkTownWinter_Blocks:
+	INCBIN "maps/NewBarkTownWinter.ablk"
+	
