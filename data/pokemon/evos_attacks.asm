@@ -3157,7 +3157,7 @@ DonphanEvosAttacks:
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
-	db 0 ; no more evolutions
+	db EVOLVE_LEVEL, 35, WYRDEER
 	db 1, CONVERSION2
 	db 1, TACKLE
 	db 1, CONVERSION
@@ -3414,3 +3414,19 @@ CelebiEvosAttacks:
 	db 40, BATON_PASS
 	db 50, PERISH_SONG
 	db 0 ; no more level-up moves
+
+WyrdeerEvosAttacks:
+	db 0; no more evolutions
+	db 1, TACKLE
+	db 8, LEER
+	db 15, HYPNOSIS
+	db 23, STOMP
+	db 31, SAND_ATTACK
+	db 35, PSYCHIC_M
+	db 38, MEGAHORN
+	db 40, TAKE_DOWN
+	db 45, WILLOWISP
+	db 45, HEX
+	db 49, CONFUSE_RAY
+	db 0 ; no more level-up moves
+	
