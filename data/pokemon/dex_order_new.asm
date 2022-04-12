@@ -131,6 +131,7 @@ NewPokedexOrder:
 	db GROWLITHE
 	db ARCANINE
 	db STANTLER
+	db WYRDEER
 	db MARILL
 	db AZUMARILL
 	db DIGLETT
