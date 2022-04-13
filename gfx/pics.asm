@@ -714,10 +714,8 @@ UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
-; Seems to be an accidental copy of the previous bank
-
-WyrdeerFrontPic:	INCBIN "gfx/pokemon/wyrdeer/front.animated.2bpp.lz"
-WyrdeerBackPic:		INCBIN "gfx/pokemon/wyrdeer/back.2bpp.lz"
+WyrdeerFrontpic:	INCBIN "gfx/pokemon/wyrdeer/front.animated.2bpp.lz"
+WyrdeerBackpic:		INCBIN "gfx/pokemon/wyrdeer/back.2bpp.lz"
 
 
 
