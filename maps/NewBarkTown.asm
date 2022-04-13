@@ -281,8 +281,8 @@ NewBarkTownElmsHouseSignText:
 	done
 
 NewBarkTownShrine:
-	jumpstd ShrineScript
-		ifequal 1,   .Fall
+	callstd ShrineScript
+	ifequal 1,   .Fall
 	ifequal 2, .Winter
 	ifequal 3, .Spring
 	ifequal 4, .Summer

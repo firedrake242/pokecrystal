@@ -663,7 +663,13 @@
         <File name="data\maps\landmarks.asm" />
         <File name="data\maps\blocks.asm" />
         <File name="data\maps\scripts.asm" />
-        <Folder name="WIP Maps" />
+        <Folder name="WIP Maps">
+            <File name="maps\NewBarkTownFall.asm" />
+            <File name="maps\NewBarkTownWinter.asm" />
+            <File name="maps\NewBarkTown.asm" />
+            <File name="maps\PlayersNeighborsHouse.asm" />
+        </Folder>
+        <File name="engine\events\std_scripts.asm" />
     </Project>
     <Project name="Pokemon Editing">
         <File name="data\pokemon\names.asm" />
