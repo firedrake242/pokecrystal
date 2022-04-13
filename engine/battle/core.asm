@@ -1013,13 +1013,14 @@ ResidualDamage:
 	ld hl, HurtByPoisonText
 	ld de, ANIM_PSN
 	bit PSN, a
-	jr z, .got_anim
+	jr nz, .got_anim
 	ld hl, HurtByBurnText
 	ld de, ANIM_BRN
 	bit BRN, a
-	jr z, .got_anim
+	jr nz, .got_anim
 	ld hl, FrozenSolidText
 	ld de, ANIM_FRZ
+	
 .got_anim
 
 	push de

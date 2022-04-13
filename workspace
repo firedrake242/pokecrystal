@@ -663,6 +663,7 @@
         <File name="data\maps\landmarks.asm" />
         <File name="data\maps\blocks.asm" />
         <File name="data\maps\scripts.asm" />
+        <Folder name="WIP Maps" />
     </Project>
     <Project name="Pokemon Editing">
         <File name="data\pokemon\names.asm" />

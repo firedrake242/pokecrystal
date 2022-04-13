@@ -3157,7 +3157,7 @@ DonphanEvosAttacks:
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
-	db EVOLVE_LEVEL, 35, WYRDEER
+	db 0 ; no more evolutions
 	db 1, CONVERSION2
 	db 1, TACKLE
 	db 1, CONVERSION
@@ -3171,7 +3171,7 @@ Porygon2EvosAttacks:
 	db 0 ; no more level-up moves
 
 StantlerEvosAttacks:
-	db 0 ; no more evolutions
+	db EVOLVE_LEVEL, 35, WYRDEER
 	db 1, TACKLE
 	db 8, LEER
 	db 15, HYPNOSIS
