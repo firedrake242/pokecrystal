@@ -383,7 +383,6 @@ AI_Smart_EffectHandlers:
 	dbw EFFECT_EARTHQUAKE,       AI_Smart_Earthquake
 	dbw EFFECT_FUTURE_SIGHT,     AI_Smart_FutureSight
 	dbw EFFECT_GUST,             AI_Smart_Gust
-	dbw EFFECT_STOMP,            AI_Smart_Stomp
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
@@ -2670,19 +2669,6 @@ AI_Smart_FutureSight:
 	ret z
 
 	dec [hl]
-	dec [hl]
-	ret
-
-AI_Smart_Stomp:
-; 80% chance to encourage this move if the player has used Minimize.
-
-	ld a, [wPlayerMinimized]
-	and a
-	ret z
-
-	call AI_80_20
-	ret c
-
 	dec [hl]
 	ret
 

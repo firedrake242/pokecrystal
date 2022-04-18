@@ -6580,9 +6580,73 @@ ApplyStatusEffectOnEnemyStats:
 
 ApplyStatusEffectOnStats:
 	ldh [hBattleTurn], a
+	call ApplySunEffectOnSpeed
 	call ApplyPrzEffectOnSpeed
 	call ApplyFrzEffectOnSpclAtk
 	jp ApplyBrnEffectOnAttack
+
+ApplySunEffectOnSpeed:
+; check if the weather is sun
+	ld a, [wBattleWeather]
+	cp WEATHER_SUN
+	ret nz
+; check whose turn it is
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .enemy
+; load player's pokemon type
+	ld hl, wBattleMonType
+	ld a, [hli]
+	cp GRASS
+	jr z, .player_boost
+	ld a, [hl]
+	cp GRASS
+	ret nz
+	
+.player_boost
+	ld hl, wBattleMonSpeed+1
+	ld a, [hld]
+	ld b, a
+	ld a, [hl]
+	sla a
+	rl b
+	sla a
+	rl b
+	ld [hli], a
+	or b
+	jr nz, .player_ok
+	ld b, $1 ; min speed
+
+.player_ok
+	ld [hl], b
+	ret
+	
+.enemy
+	ld hl, wEnemyMonType
+	ld a, [hli]
+	cp GRASS
+	jr z, .enemy_boost
+	ld a, [hl]
+	cp GRASS
+	ret nz
+	
+.enemy_boost
+	ld hl, wBattleMonSpeed+1
+	ld a, [hld]
+	ld b, a
+	ld a, [hl]
+	sla a
+	rl b
+	sla a
+	rl b
+	ld [hli], a
+	or b
+	jr nz, .enemy_ok
+	ld b, $1 ; min speed
+
+.enemy_ok
+	ld [hl], b
+	ret	
 
 ApplyPrzEffectOnSpeed:
 	ldh a, [hBattleTurn]
@@ -9194,3 +9258,4 @@ BattleStartMessage:
 	farcall Mobile_PrintOpponentBattleMessage
 
 	ret
+

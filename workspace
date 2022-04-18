@@ -5947,5 +5947,6 @@
         </Folder>
         <File name="engine\battle\effect_commands.asm" />
         <File name="engine\battle\ai\scoring.asm" />
+        <File name="engine\battle\core.asm" />
     </Project>
 </NotepadPlus>
