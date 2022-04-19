@@ -20,7 +20,6 @@ AI_Redundant:
 	dbw EFFECT_MIST,         .Mist
 	dbw EFFECT_FOCUS_ENERGY, .FocusEnergy
 	dbw EFFECT_CONFUSE,      .Confuse
-	dbw EFFECT_TRANSFORM,    .Transform
 	dbw EFFECT_REFLECT,      .Reflect
 	dbw EFFECT_SUBSTITUTE,   .Substitute
 	dbw EFFECT_LEECH_SEED,   .LeechSeed
@@ -68,11 +67,6 @@ AI_Redundant:
 	ret nz
 	ld a, [wPlayerScreens]
 	bit SCREENS_SAFEGUARD, a
-	ret
-
-.Transform:
-	ld a, [wEnemySubStatus5]
-	bit SUBSTATUS_TRANSFORMED, a
 	ret
 
 .Reflect:

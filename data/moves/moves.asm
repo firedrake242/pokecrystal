@@ -22,7 +22,7 @@ Moves:
 	move FIRE_PUNCH,   EFFECT_BURN_HIT,           75, FIRE,         100, 15,  10
 	move ICE_PUNCH,    EFFECT_FREEZE_HIT,         75, ICE,          100, 15,  10
 	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       75, ELECTRIC,     100, 15,  10
-	move SCRATCH,      EFFECT_NORMAL_HIT,         40, NORMAL,       100, 35,   0
+	move MOONBLAST,    EFFECT_SP_DEF_DOWN_HIT,    80, FAIRY,        100, 15,  10
 	move VICEGRIP,     EFFECT_NORMAL_HIT,         55, NORMAL,       100, 30,   0
 	move WILLOWISP,    EFFECT_BURN_HIT,            0,   FIRE,        85, 15, 100
 	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, NORMAL,        75, 10,   0
@@ -156,7 +156,7 @@ Moves:
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          70, BUG,          100, 15,   0
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,        75, 10,   0
 	move SKY_ATTACK,   EFFECT_SKY_ATTACK,        140, FLYING,        90,  5,   0
-	move TRANSFORM,    EFFECT_TRANSFORM,           0, NORMAL,       100, 10,   0
+	move ECLIPSE,    EFFECT_ECLIPSE,               0, GHOST,        100, 10,   0
 	move SCALD,        EFFECT_BURN_HIT,           80, WATER,        100, 15,  30
 	move DIZZY_PUNCH,  EFFECT_CONFUSE_HIT,        70, NORMAL,       100, 10,  20
 	move SPORE,        EFFECT_SLEEP,               0, GRASS,        100, 15,   0

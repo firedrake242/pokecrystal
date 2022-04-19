@@ -15,7 +15,7 @@
 	const FIRE_PUNCH   ; 07
 	const ICE_PUNCH    ; 08
 	const THUNDERPUNCH ; 09
-	const SCRATCH      ; 0a
+	const MOONBLAST    ; 0a
 	const VICEGRIP     ; 0b
 	const WILLOWISP    ; 0c
 	const RAZOR_WIND   ; 0d
@@ -149,7 +149,7 @@
 	const LEECH_LIFE   ; 8d
 	const LOVELY_KISS  ; 8e
 	const SKY_ATTACK   ; 8f
-	const TRANSFORM    ; 90
+	const ECLIPSE      ; 90
 	const SCALD        ; 91
 	const DIZZY_PUNCH  ; 92
 	const SPORE        ; 93

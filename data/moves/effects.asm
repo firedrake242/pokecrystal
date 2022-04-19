@@ -999,11 +999,11 @@ Heal:
 	heal
 	endmove
 
-Transform:
+Eclipse:
 	checkobedience
 	usedmovetext
 	doturn
-	transform
+	starteclipse
 	endmove
 
 LightScreen:

@@ -6252,7 +6252,7 @@ BattleCommand_Heal:
 	ld hl, HPIsFullText
 	jp StdBattleTextbox
 
-INCLUDE "engine/battle/move_effects/transform.asm"
+INCLUDE "engine/battle/move_effects/eclipse.asm"
 
 BattleEffect_ButItFailed:
 	call AnimateFailedMove

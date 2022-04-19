@@ -2129,7 +2129,6 @@ AI_Smart_Hail:
 	db BLIZZARD
 	db -1 ; end
 
-
 AI_Smart_Endure:
 ; Greatly discourage this move if the enemy already used Protect.
 	ld a, [wEnemyProtectCount]

@@ -11,7 +11,7 @@ BattleAnimations::
 	dw BattleAnim_FirePunch
 	dw BattleAnim_IcePunch
 	dw BattleAnim_Thunderpunch
-	dw BattleAnim_Scratch
+	dw BattleAnim_MoonBlast
 	dw BattleAnim_Vicegrip
 	dw BattleAnim_Willowisp
 	dw BattleAnim_RazorWind
@@ -145,7 +145,7 @@ BattleAnimations::
 	dw BattleAnim_LeechLife
 	dw BattleAnim_LovelyKiss
 	dw BattleAnim_SkyAttack
-	dw BattleAnim_Transform
+	dw BattleAnim_Eclipse
 	dw BattleAnim_Scald
 	dw BattleAnim_DizzyPunch
 	dw BattleAnim_Spore
@@ -1495,14 +1495,21 @@ BattleAnim_Vicegrip:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_Scratch:
-	anim_1gfx ANIM_GFX_CUT
-	anim_sound 0, 1, SFX_SCRATCH
-	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 144, 48, $0
-	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 140, 44, $0
-	anim_obj ANIM_OBJ_CUT_DOWN_LEFT, 136, 40, $0
-	anim_wait 32
+BattleAnim_Eclipse:
+BattleAnim_MoonBlast:
+	anim_1gfx ANIM_GFX_SHINE
+	anim_bgp $1b
+	anim_bgeffect ANIM_BG_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $0, $0
+	anim_obj ANIM_OBJ_MOONLIGHT, 0, 40, $0
+	anim_obj ANIM_OBJ_MOONLIGHT, 16, 56, $0
+	anim_obj ANIM_OBJ_MOONLIGHT, 32, 72, $0
+	anim_obj ANIM_OBJ_MOONLIGHT, 48, 88, $0
+	anim_obj ANIM_OBJ_MOONLIGHT, 64, 104, $0
+	anim_wait 1
+	anim_sound 0, 0, SFX_MOONLIGHT
+	anim_wait 63
 	anim_ret
+
 
 BattleAnim_FurySwipes:
 	anim_1gfx ANIM_GFX_CUT
@@ -2329,19 +2336,6 @@ BattleAnim_SpikeCannon:
 	anim_obj ANIM_OBJ_HIT_SMALL, 132, 52, $0
 	anim_loop 3, .loop
 	anim_wait 16
-	anim_ret
-
-BattleAnim_Transform:
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row
-	anim_transform
-	anim_sound 0, 0, SFX_PSYBEAM
-	anim_bgeffect ANIM_BG_WAVE_DEFORM_MON, $0, BG_EFFECT_USER, $0
-	anim_wait 48
-	anim_updateactorpic
-	anim_incbgeffect ANIM_BG_WAVE_DEFORM_MON
-	anim_wait 48
-	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
 BattleAnim_PetalDance:

@@ -10,7 +10,7 @@ MoveDescriptions::
 	dw FirePunchDescription
 	dw IcePunchDescription
 	dw ThunderpunchDescription
-	dw ScratchDescription
+	dw MoonBlastDescription
 	dw VicegripDescription
 	dw WillowispDescription
 	dw RazorWindDescription
@@ -144,7 +144,7 @@ MoveDescriptions::
 	dw LeechLifeDescription
 	dw LovelyKissDescription
 	dw SkyAttackDescription
-	dw TransformDescription
+	dw EclipseDescription
 	dw ScaldDescription
 	dw DizzyPunchDescription
 	dw SporeDescription
@@ -300,9 +300,9 @@ ThunderpunchDescription:
 	db   "An electric punch."
 	next "It may paralyze.@"
 
-ScratchDescription:
-	db   "Scratches with"
-	next "sharp claws.@"
+MoonBlastDescription:
+	db   "Attacks with"
+	next "the moon.@"
 
 VicegripDescription:
 	db   "Grips with power-"
@@ -836,9 +836,9 @@ SkyAttackDescription:
 	db   "1st turn: Prepare"
 	next "2nd turn: Attack@"
 
-TransformDescription:
-	db   "The user assumes"
-	next "the foe's guise.@"
+EclipseDescription:
+	db   "Summons an"
+	next "eclipse.@"
 
 ScaldDescription:
 	db   "Boiling water that"
