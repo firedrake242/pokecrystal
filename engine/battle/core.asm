@@ -6605,20 +6605,12 @@ ApplySunEffectOnSpeed:
 	
 .player_boost
 	ld hl, wBattleMonSpeed+1
-	ld a, [hld]
-	ld b, a
-	ld a, [hl]
-	sla a
-	rl b
-	sla a
-	rl b
-	ld [hli], a
-	or b
-	jr nz, .player_ok
-	ld b, $1 ; min speed
-
-.player_ok
-	ld [hl], b
+    ld a, [hld]
+    add a ; × 2
+	add a ; x 4
+    rl [hl]
+    inc hl
+    ld [hl], a
 	ret
 	
 .enemy
@@ -6632,20 +6624,12 @@ ApplySunEffectOnSpeed:
 	
 .enemy_boost
 	ld hl, wBattleMonSpeed+1
-	ld a, [hld]
-	ld b, a
-	ld a, [hl]
-	sla a
-	rl b
-	sla a
-	rl b
-	ld [hli], a
-	or b
-	jr nz, .enemy_ok
-	ld b, $1 ; min speed
-
-.enemy_ok
-	ld [hl], b
+    ld a, [hld]
+    add a ; × 2
+	add a ; x 4
+    rl [hl]
+    inc hl
+    ld [hl], a
 	ret	
 
 ApplyPrzEffectOnSpeed:
