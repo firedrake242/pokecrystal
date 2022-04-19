@@ -122,7 +122,7 @@ SquirtleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, TAIL_WHIP
-	db 7, SCALD
+	db 7, WATER_GUN
 	db 10, WITHDRAW
 	db 13, WATER_GUN
 	db 18, BITE
@@ -138,9 +138,9 @@ WartortleEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 4, TAIL_WHIP
-	db 7, SCALD
+	db 7, WATER_GUN
 	db 10, WITHDRAW
 	db 13, WATER_GUN
 	db 19, BITE
@@ -155,10 +155,10 @@ BlastoiseEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 1, WITHDRAW
 	db 4, TAIL_WHIP
-	db 7, SCALD
+	db 7, WATER_GUN
 	db 10, WITHDRAW
 	db 13, WATER_GUN
 	db 19, BITE
@@ -809,7 +809,7 @@ ArcanineEvosAttacks:
 PoliwagEvosAttacks:
 	db EVOLVE_LEVEL, 25, POLIWHIRL
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 7, HYPNOSIS
 	db 13, WATER_GUN
 	db 19, DOUBLESLAP
@@ -823,7 +823,7 @@ PoliwhirlEvosAttacks:
 	db EVOLVE_ITEM, WATER_STONE, POLIWRATH
 	db EVOLVE_TRADE, KINGS_ROCK, POLITOED
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 1, HYPNOSIS
 	db 1, WATER_GUN
 	db 7, HYPNOSIS
@@ -975,7 +975,7 @@ TentacoolEvosAttacks:
 	db 19, ACID
 	db 25, BUBBLEBEAM
 	db 28, HEX
-	db 30, WRAP
+	db 30, SCALD
 	db 36, BARRIER
 	db 43, SCREECH
 	db 49, HYDRO_PUMP
@@ -991,7 +991,7 @@ TentacruelEvosAttacks:
 	db 19, ACID
 	db 25, BUBBLEBEAM
 	db 28, HEX
-	db 30, WRAP
+	db 30, SCALD
 	db 38, BARRIER
 	db 47, SCREECH
 	db 55, HYDRO_PUMP
@@ -1085,6 +1085,7 @@ SlowpokeEvosAttacks:
 	db 20, CONFUSION
 	db 29, DISABLE
 	db 34, HEADBUTT
+	db 38, SCALD
 	db 43, AMNESIA
 	db 48, PSYCHIC_M
 	db 0 ; no more level-up moves
@@ -1100,8 +1101,9 @@ SlowbroEvosAttacks:
 	db 20, CONFUSION
 	db 29, DISABLE
 	db 34, HEADBUTT
-	db 37, WITHDRAW
+	db 37, SCALD
 	db 46, AMNESIA
+	db 48, FUTURE_SIGHT
 	db 54, PSYCHIC_M
 	db 0 ; no more level-up moves
 
@@ -1354,7 +1356,7 @@ HypnoEvosAttacks:
 KrabbyEvosAttacks:
 	db EVOLVE_LEVEL, 28, KINGLER
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 5, LEER
 	db 12, VICEGRIP
 	db 16, HARDEN
@@ -1366,7 +1368,7 @@ KrabbyEvosAttacks:
 
 KinglerEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 1, LEER
 	db 1, VICEGRIP
 	db 5, LEER
@@ -1608,7 +1610,7 @@ KangaskhanEvosAttacks:
 HorseaEvosAttacks:
 	db EVOLVE_LEVEL, 32, SEADRA
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 8, SMOKESCREEN
 	db 15, LEER
 	db 22, WATER_GUN
@@ -1620,13 +1622,12 @@ HorseaEvosAttacks:
 SeadraEvosAttacks:
 	db EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 1, SMOKESCREEN
 	db 1, LEER
-	db 1, WATER_GUN
 	db 8, SMOKESCREEN
 	db 15, LEER
-	db 22, WATER_GUN
+	db 22, SCALD
 	db 29, TWISTER
 	db 40, AGILITY
 	db 51, HYDRO_PUMP
@@ -1672,6 +1673,7 @@ StaryuEvosAttacks:
 	db 31, BUBBLEBEAM
 	db 37, MINIMIZE
 	db 43, LIGHT_SCREEN
+	db 45, SCALD
 	db 50, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -1680,7 +1682,7 @@ StarmieEvosAttacks:
 	db 1, TACKLE
 	db 1, RAPID_SPIN
 	db 1, RECOVER
-	db 1, BUBBLEBEAM
+	db 1, SCALD
 	db 37, CONFUSE_RAY
 	db 0 ; no more level-up moves
 
@@ -1853,6 +1855,7 @@ VaporeonEvosAttacks:
 	db 30, BITE
 	db 36, AURORA_BEAM
 	db 42, HAZE
+	db 45, SCALD
 	db 47, ACID_ARMOR
 	db 52, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -2200,7 +2203,7 @@ TotodileEvosAttacks:
 	db 27, SCARY_FACE
 	db 35, SLASH
 	db 43, SCREECH
-	db 52, HYDRO_PUMP
+	db 52, SCALD
 	db 0 ; no more level-up moves
 
 CroconawEvosAttacks:
@@ -2215,7 +2218,7 @@ CroconawEvosAttacks:
 	db 28, SCARY_FACE
 	db 37, SLASH
 	db 45, SCREECH
-	db 55, HYDRO_PUMP
+	db 55, SCALD
 	db 0 ; no more level-up moves
 
 FeraligatrEvosAttacks:
@@ -2230,7 +2233,7 @@ FeraligatrEvosAttacks:
 	db 28, SCARY_FACE
 	db 38, SLASH
 	db 47, SCREECH
-	db 58, HYDRO_PUMP
+	db 58, SCALD
 	db 0 ; no more level-up moves
 
 SentretEvosAttacks:
@@ -2367,7 +2370,7 @@ CrobatEvosAttacks:
 ChinchouEvosAttacks:
 	db EVOLVE_LEVEL, 27, LANTURN
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 1, THUNDER_WAVE
 	db 5, SUPERSONIC
 	db 13, FLAIL
@@ -2380,7 +2383,7 @@ ChinchouEvosAttacks:
 
 LanturnEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 1, THUNDER_WAVE
 	db 1, SUPERSONIC
 	db 5, SUPERSONIC
@@ -2526,7 +2529,7 @@ MarillEvosAttacks:
 	db 6, TAIL_WHIP
 	db 10, WATER_GUN
 	db 15, ROLLOUT
-	db 21, BUBBLEBEAM
+	db 21, SCALD
 	db 28, DOUBLE_EDGE
 	db 36, RAIN_DANCE
 	db 0 ; no more level-up moves
@@ -2541,7 +2544,7 @@ AzumarillEvosAttacks:
 	db 6, TAIL_WHIP
 	db 10, WATER_GUN
 	db 15, ROLLOUT
-	db 25, BUBBLEBEAM
+	db 25, SCALD
 	db 36, DOUBLE_EDGE
 	db 48, RAIN_DANCE
 	db 0 ; no more level-up moves
@@ -2559,7 +2562,7 @@ SudowoodoEvosAttacks:
 
 PolitoedEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
+	db 1, SCALD
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
 	db 1, PERISH_SONG
@@ -2675,7 +2678,7 @@ WooperEvosAttacks:
 	db 31, EARTHQUAKE
 	db 41, RAIN_DANCE
 	db 51, MIST
-	db 51, HAZE
+	db 51, SCALD
 	db 0 ; no more level-up moves
 
 QuagsireEvosAttacks:
@@ -2687,7 +2690,7 @@ QuagsireEvosAttacks:
 	db 35, EARTHQUAKE
 	db 47, RAIN_DANCE
 	db 59, MIST
-	db 59, HAZE
+	db 59, SCALD
 	db 0 ; no more level-up moves
 
 EspeonEvosAttacks:
@@ -2740,7 +2743,8 @@ SlowkingEvosAttacks:
 	db 20, CONFUSION
 	db 29, DISABLE
 	db 34, HEADBUTT
-	db 43, SWAGGER
+	db 40, SCALD
+	db 43, FUTURE_SIGHT
 	db 48, PSYCHIC_M
 	db 0 ; no more level-up moves
 
@@ -3035,7 +3039,7 @@ CorsolaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 7, HARDEN
-	db 13, SCALD
+	db 13, WATER_GUN
 	db 19, RECOVER
 	db 25, BUBBLEBEAM
 	db 31, SPIKE_CANNON
@@ -3087,10 +3091,11 @@ DelibirdEvosAttacks:
 MantineEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 10, SUPERSONIC
 	db 18, BUBBLEBEAM
 	db 25, TAKE_DOWN
+	db 30, SCALD
 	db 32, AGILITY
 	db 40, WING_ATTACK
 	db 49, CONFUSE_RAY
@@ -3136,7 +3141,7 @@ HoundoomEvosAttacks:
 
 KingdraEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SCALD
+	db 1, WATER_GUN
 	db 1, SMOKESCREEN
 	db 1, LEER
 	db 1, WATER_GUN
@@ -3336,6 +3341,7 @@ SuicuneEvosAttacks:
 	db 1, LEER
 	db 11, BUBBLEBEAM
 	db 21, RAIN_DANCE
+	db 23, SCALD
 	db 31, GUST
 	db 41, AURORA_BEAM
 	db 51, MIST
