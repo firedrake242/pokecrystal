@@ -2102,6 +2102,7 @@ ChikoritaEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 8, RAZOR_LEAF
+	db 12, CONFUSION
 	db 12, REFLECT
 	db 15, POISONPOWDER
 	db 22, MOONLIGHT
@@ -2120,12 +2121,13 @@ BayleefEvosAttacks:
 	db 1, RAZOR_LEAF
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
-	db 12, REFLECT
+	db 12, CONFUSION
 	db 15, POISONPOWDER
 	db 23, MOONLIGHT
 	db 23, ECLIPSE
 	db 31, BODY_SLAM
 	db 39, LIGHT_SCREEN
+	db 39, REFLECT
 	db 47, SAFEGUARD
 	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
@@ -2137,12 +2139,13 @@ MeganiumEvosAttacks:
 	db 1, RAZOR_LEAF
 	db 1, REFLECT
 	db 8, RAZOR_LEAF
-	db 12, REFLECT
+	db 12, CONFUSION
 	db 15, POISONPOWDER
 	db 23, MOONLIGHT
 	db 23, ECLIPSE
 	db 31, BODY_SLAM
 	db 41, LIGHT_SCREEN
+	db 41, REFLECT
 	db 51, SAFEGUARD
 	db 61, SOLARBEAM
 	db 0 ; no more level-up moves
