@@ -27,7 +27,6 @@ StallMoves:
 	db FOCUS_ENERGY
 	db BIDE
 	db AMNESIA
-	db TRANSFORM
 	db SPLASH
 	db ACID_ARMOR
 	db SHARPEN

@@ -1,14 +1,14 @@
-BattleCommand_StartSandstorm:
+BattleCommand_StartEclipse:
 ; startsandstorm
 
 	ld a, [wBattleWeather]
-	cp WEATHER_SANDSTORM
+	cp WEATHER_ECLIPSE
 	jr z, .failed
 
-	ld a, WEATHER_SANDSTORM
+	ld a, WEATHER_ECLIPSE
 	ld [wBattleWeather], a
 	call AnimateCurrentMove
-	ld hl, SandstormBrewedText
+	ld hl, EclipseBeginsText
 	jp StdBattleTextbox
 
 .failed

@@ -58,7 +58,7 @@ MoveEffectsPointers:
 	dw SpecialDefenseUp2
 	dw AccuracyUp2
 	dw EvasionUp2
-	dw Transform
+	dw Eclipse
 	dw AttackDown2
 	dw DefenseDown2
 	dw SpeedDown2
