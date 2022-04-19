@@ -6616,6 +6616,8 @@ BattleCommand_TimeBasedHealContinue:
 	inc c
 	cp WEATHER_SUN
 	jr z, .Heal
+	cp WEATHER_ECLIPSE
+	jr z, .Heal
 	dec c
 	dec c
 

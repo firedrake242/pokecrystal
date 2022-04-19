@@ -5955,4 +5955,9 @@
         <File name="engine\battle\ai\scoring.asm" />
         <File name="engine\battle\core.asm" />
     </Project>
+    <Project name="Add Weather">
+        <File name="constants\battle_constants.asm" />
+        <File name="data\text\battle.asm" />
+        <File name="engine\battle\core.asm" />
+    </Project>
 </NotepadPlus>

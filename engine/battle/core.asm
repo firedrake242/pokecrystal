@@ -1630,18 +1630,6 @@ HandleWeather:
 	cp WEATHER_NONE
 	ret z
 
-	ld hl, wWeatherCount
-	dec [hl]
-	jr nz, .continues
-	
-; ended
-	ld hl, .WeatherEndedMessages
-	call .PrintWeatherMessage
-	xor a
-	ld [wBattleWeather], a
-	ret
-	
-.continues
 	ld hl, .WeatherMessages
 	call .PrintWeatherMessage
 
@@ -1775,6 +1763,7 @@ HandleWeather:
 	dw BattleText_TheSunlightIsStrong
 	dw BattleText_TheSandstormRages
 	dw BattleText_HailContinuesToFall
+	dw BattleText_EclipseContinues
 
 .WeatherEndedMessages:
 ; entries correspond to WEATHER_* constants
@@ -1782,6 +1771,7 @@ HandleWeather:
 	dw BattleText_TheSunlightFaded
 	dw BattleText_TheSandstormSubsided
 	dw BattleText_TheHailStopped
+	dw BattleText_TheEclipseEnded
 
 SubtractHPFromTarget:
 	call SubtractHP
