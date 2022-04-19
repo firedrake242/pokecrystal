@@ -32,7 +32,7 @@ MoveDescriptions::
 	dw HeadbuttDescription
 	dw HornAttackDescription
 	dw FuryAttackDescription
-	dw HornDrillDescription
+	dw AccelerockDescription
 	dw TackleDescription
 	dw BodySlamDescription
 	dw WrapDescription
@@ -388,10 +388,9 @@ FuryAttackDescription:
 	db   "Jabs the target"
 	next "2-5 times.@"
 
-HornDrillDescription:
-	db   "A one-hit KO,"
-	next "drill attack.@"
-
+AccelerockDescription:
+	db   "A rapid charge."
+	next "Goes first.@"
 TackleDescription:
 	db   "A full-body charge"
 	next "attack.@"

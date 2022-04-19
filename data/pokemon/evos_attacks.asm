@@ -443,7 +443,7 @@ NidoranMEvosAttacks:
 	db 17, POISON_STING
 	db 23, FOCUS_ENERGY
 	db 30, FURY_ATTACK
-	db 38, HORN_DRILL
+	db 38, EARTHQUAKE
 	db 0 ; no more level-up moves
 
 NidorinoEvosAttacks:
@@ -456,7 +456,7 @@ NidorinoEvosAttacks:
 	db 19, POISON_STING
 	db 27, FOCUS_ENERGY
 	db 36, FURY_ATTACK
-	db 46, HORN_DRILL
+	db 46, EARTHQUAKE
 	db 0 ; no more level-up moves
 
 NidokingEvosAttacks:
@@ -1003,6 +1003,7 @@ GeodudeEvosAttacks:
 	db 1, TACKLE
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
+	db 13, ACCELEROCK
 	db 16, MAGNITUDE
 	db 21, SELFDESTRUCT
 	db 26, HARDEN
@@ -1019,6 +1020,7 @@ GravelerEvosAttacks:
 	db 1, ROCK_THROW
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
+	db 13, ACCELEROCK
 	db 16, MAGNITUDE
 	db 21, SELFDESTRUCT
 	db 27, HARDEN
@@ -1035,6 +1037,7 @@ GolemEvosAttacks:
 	db 1, MAGNITUDE
 	db 6, DEFENSE_CURL
 	db 11, ROCK_THROW
+	db 13, ACCELEROCK
 	db 16, MAGNITUDE
 	db 21, SELFDESTRUCT
 	db 27, HARDEN
@@ -1316,6 +1319,7 @@ OnixEvosAttacks:
 	db 14, ROCK_THROW
 	db 23, HARDEN
 	db 27, RAGE
+	db 30, ACCELEROCK
 	db 36, SANDSTORM
 	db 40, SLAM
 	db 0 ; no more level-up moves
@@ -1545,7 +1549,7 @@ RhyhornEvosAttacks:
 	db 13, STOMP
 	db 19, FURY_ATTACK
 	db 31, SCARY_FACE
-	db 37, HORN_DRILL
+	db 37, MAGNITUDE
 	db 49, TAKE_DOWN
 	db 55, EARTHQUAKE
 	db 0 ; no more level-up moves
@@ -1559,7 +1563,7 @@ RhydonEvosAttacks:
 	db 13, STOMP
 	db 19, FURY_ATTACK
 	db 31, SCARY_FACE
-	db 37, HORN_DRILL
+	db 37, MAGNITUDE
 	db 54, TAKE_DOWN
 	db 65, EARTHQUAKE
 	db 0 ; no more level-up moves
@@ -1643,7 +1647,7 @@ GoldeenEvosAttacks:
 	db 24, FLAIL
 	db 29, FURY_ATTACK
 	db 38, WATERFALL
-	db 43, HORN_DRILL
+	db 43, EARTHQUAKE
 	db 52, AGILITY
 	db 0 ; no more level-up moves
 
@@ -1657,7 +1661,7 @@ SeakingEvosAttacks:
 	db 24, FLAIL
 	db 29, FURY_ATTACK
 	db 41, WATERFALL
-	db 49, HORN_DRILL
+	db 49, EARTHQUAKE
 	db 61, AGILITY
 	db 0 ; no more level-up moves
 
@@ -1933,7 +1937,7 @@ OmastarEvosAttacks:
 KabutoEvosAttacks:
 	db EVOLVE_LEVEL, 40, KABUTOPS
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, ACCELEROCK
 	db 1, HARDEN
 	db 10, ABSORB
 	db 19, LEER
@@ -1945,7 +1949,7 @@ KabutoEvosAttacks:
 
 KabutopsEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, ACCELEROCK
 	db 1, HARDEN
 	db 1, ABSORB
 	db 10, ABSORB
@@ -1960,6 +1964,7 @@ KabutopsEvosAttacks:
 AerodactylEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WING_ATTACK
+	db 1, ACCELEROCK
 	db 8, AGILITY
 	db 15, BITE
 	db 22, SUPERSONIC
@@ -2554,7 +2559,7 @@ AzumarillEvosAttacks:
 
 SudowoodoEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, ROCK_THROW
+	db 1, ACCELEROCK
 	db 1, MIMIC
 	db 10, FLAIL
 	db 19, LOW_KICK
@@ -2576,13 +2581,13 @@ PolitoedEvosAttacks:
 HoppipEvosAttacks:
 	db EVOLVE_LEVEL, 18, SKIPLOOM
 	db 0 ; no more evolutions
-	db 1, SPLASH
+	db 1, CHARM
 	db 5, SYNTHESIS
-	db 5, TAIL_WHIP
+	db 5, SCREECH
 	db 10, TACKLE
 	db 13, POISONPOWDER
 	db 15, STUN_SPORE
-	db 17, SLEEP_POWDER
+	db 17, SPORE
 	db 20, LEECH_SEED
 	db 25, COTTON_SPORE
 	db 30, MEGA_DRAIN
@@ -2591,16 +2596,16 @@ HoppipEvosAttacks:
 SkiploomEvosAttacks:
 	db EVOLVE_LEVEL, 27, JUMPLUFF
 	db 0 ; no more evolutions
-	db 1, SPLASH
+	db 1, CHARM
 	db 1, SYNTHESIS
-	db 1, TAIL_WHIP
+	db 1, SCREECH
 	db 1, TACKLE
 	db 5, SYNTHESIS
-	db 5, TAIL_WHIP
+	db 5, SCREECH
 	db 10, TACKLE
 	db 13, POISONPOWDER
 	db 15, STUN_SPORE
-	db 17, SLEEP_POWDER
+	db 17, SPORE
 	db 22, LEECH_SEED
 	db 29, COTTON_SPORE
 	db 36, MEGA_DRAIN
@@ -2608,16 +2613,16 @@ SkiploomEvosAttacks:
 
 JumpluffEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SPLASH
+	db 1, CHARM
 	db 1, SYNTHESIS
-	db 1, TAIL_WHIP
+	db 1, SCREECH
 	db 1, TACKLE
 	db 5, SYNTHESIS
-	db 5, TAIL_WHIP
+	db 5, SCREECH
 	db 10, TACKLE
 	db 13, POISONPOWDER
 	db 15, STUN_SPORE
-	db 17, SLEEP_POWDER
+	db 17, SPORE
 	db 22, LEECH_SEED
 	db 33, COTTON_SPORE
 	db 44, MEGA_DRAIN
