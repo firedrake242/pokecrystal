@@ -146,8 +146,13 @@ BattleText_TheSandstormRages:
 	prompt
 	
 BattleText_HailContinuesToFall:
-	text "Hail continues to"
+	text "HAIL continues to"
 	line "fall"
+	prompt
+
+BattleText_EclipseContinues:
+	text "The ECLIPSE"
+	line "continues"
 	prompt
 
 BattleText_TheRainStopped:
@@ -165,7 +170,12 @@ BattleText_TheSandstormSubsided:
 	prompt
 	
 BattleText_TheHailStopped:
-	text "the hail stopped."
+	text "the HAIL stopped."
+	prompt
+	
+BattleText_TheEclipseEnded:
+	text "the ECLIPSE"
+	line "ended."
 	prompt
 
 BattleText_EnemyMonFainted:
@@ -1118,7 +1128,7 @@ BattleText_NoTimeLeftToday: ; unreferenced
 	
 ItStartedToHailText:
 	text "It started"
-	line "to hail!"
+	line "to HAIL!"
 	prompt
 	
 PeltedByHailText:
@@ -1126,4 +1136,8 @@ PeltedByHailText:
 	line "is pelted by HAIL!"
 	prompt
 	
+EclipseBeginsText:
+	text "The moon blots out"
+	line "the sun!"
+	prompt
 	
