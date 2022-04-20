@@ -616,6 +616,7 @@ ParasEvosAttacks:
 	db 13, POISONPOWDER
 	db 19, LEECH_LIFE
 	db 25, SPORE
+	db 28, NIGHTMARE
 	db 31, SLASH
 	db 37, GROWTH
 	db 43, GIGA_DRAIN
@@ -630,6 +631,7 @@ ParasectEvosAttacks:
 	db 13, POISONPOWDER
 	db 19, LEECH_LIFE
 	db 28, SPORE
+	db 32, NIGHTMARE
 	db 37, SLASH
 	db 46, GROWTH
 	db 55, GIGA_DRAIN
@@ -2583,8 +2585,8 @@ HoppipEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CHARM
 	db 5, SYNTHESIS
-	db 5, SCREECH
-	db 10, TACKLE
+	db 5, SAFEGUARD
+	db 10, HEAL_BELL
 	db 13, POISONPOWDER
 	db 15, STUN_SPORE
 	db 17, SPORE
@@ -2598,11 +2600,11 @@ SkiploomEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CHARM
 	db 1, SYNTHESIS
-	db 1, SCREECH
+	db 1, SAFEGUARD
 	db 1, TACKLE
 	db 5, SYNTHESIS
 	db 5, SCREECH
-	db 10, TACKLE
+	db 10, HEAL_BELL
 	db 13, POISONPOWDER
 	db 15, STUN_SPORE
 	db 17, SPORE
@@ -2615,17 +2617,19 @@ JumpluffEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CHARM
 	db 1, SYNTHESIS
-	db 1, SCREECH
+	db 1, SAFEGUARD
 	db 1, TACKLE
 	db 5, SYNTHESIS
 	db 5, SCREECH
-	db 10, TACKLE
+	db 10, HEAL_BELL
 	db 13, POISONPOWDER
 	db 15, STUN_SPORE
 	db 17, SPORE
 	db 22, LEECH_SEED
 	db 33, COTTON_SPORE
-	db 44, MEGA_DRAIN
+	db 44, GIGA_DRAIN
+	db 50, WHIRLWIND
+	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
 AipomEvosAttacks:
@@ -2658,8 +2662,11 @@ SunfloraEvosAttacks:
 	db 1, POUND
 	db 4, GROWTH
 	db 10, RAZOR_LEAF
+	db 15, EMBER
 	db 19, SUNNY_DAY
+	db 25, FLAMETHROWER
 	db 31, PETAL_DANCE
+	db 38, FIRE_BLAST
 	db 46, SOLARBEAM
 	db 0 ; no more level-up moves
 
