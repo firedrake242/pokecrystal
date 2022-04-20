@@ -1695,7 +1695,7 @@ HandleWeather:
 .check_hail
 	ld a, [wBattleWeather]
 	cp WEATHER_HAIL
-	ret nz
+	jr nz, .check_eclipse
 	
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -1744,6 +1744,44 @@ HandleWeather:
 
 	ld hl, PeltedByHailText
 	jp StdBattleTextbox
+
+.check_eclipse
+	ld a, [wBattleWeather]
+	cp WEATHER_ECLIPSE
+	ret nz
+	
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .enemy_first_eclipse
+	
+	call SetPlayerTurn
+	call .eclipsenightmare
+	call SetEnemyTurn
+	jr .eclipsenightmare
+
+.enemy_first_eclipse
+	call SetEnemyTurn
+	call .eclipsenightmare
+	call SetPlayerTurn
+
+.eclipsenightmare
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	and SLP
+	jr z, .PrintWeatherMessage
+
+; Bail if the opponent is already having a nightmare.
+
+	ld a, BATTLE_VARS_SUBSTATUS1_OPP
+	call GetBattleVarAddr
+	bit SUBSTATUS_NIGHTMARE, [hl]
+	jr nz, .PrintWeatherMessage
+
+; Otherwise give the opponent a nightmare.
+
+	set SUBSTATUS_NIGHTMARE, [hl]
+	call AnimateCurrentMove
+	ld hl, StartedNightmareText
 
 .PrintWeatherMessage:
 	ld a, [wBattleWeather]
