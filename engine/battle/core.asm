@@ -1629,7 +1629,19 @@ HandleWeather:
 	ld a, [wBattleWeather]
 	cp WEATHER_NONE
 	ret z
-
+	
+	ld hl, wWeatherCount
+	dec [hl]
+	jr nz, .continues
+	
+; ended
+	ld hl, .WeatherEndedMessages
+	call .PrintWeatherMessage
+	xor a
+	ld [wBattleWeather], a
+	ret
+	
+.continues
 	ld hl, .WeatherMessages
 	call .PrintWeatherMessage
 
@@ -1755,33 +1767,36 @@ HandleWeather:
 	jr z, .enemy_first_eclipse
 	
 	call SetPlayerTurn
-	call .eclipsenightmare
+	call .eclipse_nightmare
 	call SetEnemyTurn
-	jr .eclipsenightmare
+	jr .eclipse_nightmare
 
 .enemy_first_eclipse
 	call SetEnemyTurn
-	call .eclipsenightmare
+	call .eclipse_nightmare
 	call SetPlayerTurn
 
-.eclipsenightmare
+.eclipse_nightmare
+	ld a, BATTLE_VARS_STATUS
+	call GetBattleVarAddr
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .ok2
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
-	and SLP
-	jr z, .PrintWeatherMessage
-
-; Bail if the opponent is already having a nightmare.
-
+	
+.ok2
+	bit SLP, [hl]
+	ret nz
+	
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
 	call GetBattleVarAddr
 	bit SUBSTATUS_NIGHTMARE, [hl]
-	jr nz, .PrintWeatherMessage
-
-; Otherwise give the opponent a nightmare.
-
+	ret nz
 	set SUBSTATUS_NIGHTMARE, [hl]
-	call AnimateCurrentMove
 	ld hl, StartedNightmareText
+	jp StdBattleTextbox
+	
 
 .PrintWeatherMessage:
 	ld a, [wBattleWeather]
