@@ -147,12 +147,12 @@ BattleText_TheSandstormRages:
 	
 BattleText_HailContinuesToFall:
 	text "HAIL continues to"
-	line "fall"
+	line "fall."
 	prompt
 
 BattleText_EclipseContinues:
 	text "The ECLIPSE"
-	line "continues"
+	line "continues!"
 	prompt
 
 BattleText_TheRainStopped:
