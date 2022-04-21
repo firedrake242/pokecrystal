@@ -1777,26 +1777,17 @@ HandleWeather:
 	call SetPlayerTurn
 
 .eclipse_nightmare
-	ld a, BATTLE_VARS_STATUS
-	call GetBattleVarAddr
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok2
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	
-.ok2
-	ld a, [hl]
-	and SLP
-	ret z
-	
-	ld a, BATTLE_VARS_SUBSTATUS1_OPP
-	call GetBattleVarAddr
-	bit SUBSTATUS_NIGHTMARE, [hl]
-	ret nz
-	set SUBSTATUS_NIGHTMARE, [hl]
-	ld hl, StartedNightmareText
-	jp StdBattleTextbox
+  ld a, BATTLE_VARS_STATUS_OPP
+  call GetBattleVar
+  and SLP
+  ret z
+  ld a, BATTLE_VARS_SUBSTATUS1_OPP
+  call GetBattleVarAddr
+  bit SUBSTATUS_NIGHTMARE, [hl]
+  ret nz
+  set SUBSTATUS_NIGHTMARE, [hl]
+  ld hl, StartedNightmareText
+  jp StdBattleTextbox
 	
 
 .PrintWeatherMessage:
