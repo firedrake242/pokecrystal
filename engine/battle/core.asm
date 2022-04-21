@@ -1786,8 +1786,9 @@ HandleWeather:
 	call GetBattleVarAddr
 	
 .ok2
-	bit SLP, [hl]
-	ret nz
+	ld a, [hl]
+	and SLP
+	ret z
 	
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
 	call GetBattleVarAddr
