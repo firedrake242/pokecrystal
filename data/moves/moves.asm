@@ -24,7 +24,7 @@ Moves:
 	move THUNDERPUNCH, EFFECT_PARALYZE_HIT,       75, ELECTRIC,     100, 15,  10
 	move MOONBLAST,    EFFECT_SP_DEF_DOWN_HIT,    80, FAIRY,        100, 15,  10
 	move VICEGRIP,     EFFECT_NORMAL_HIT,         55, NORMAL,       100, 30,   0
-	move WILLOWISP,    EFFECT_BURN_HIT,            0,   FIRE,        85, 15, 100
+	move WILLOWISP,    EFFECT_BURN_HIT,            0, FIRE,        85, 15, 100
 	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, NORMAL,        75, 10,   0
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,       100, 30,   0
 	move CUT,          EFFECT_NORMAL_HIT,         50, NORMAL,        95, 30,   0
