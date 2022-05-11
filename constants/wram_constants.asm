@@ -131,6 +131,13 @@ ANYTIME EQU MORN | DAY | NITE
 ; wTimeOfDayPalset::
 DARKNESS_PALSET EQU (DARKNESS_F << 6) | (DARKNESS_F << 4) | (DARKNESS_F << 2) | DARKNESS_F
 
+; wCurrentSeason::
+	const_def
+	const SEASON_SUMMER ;0
+	const SEASON_FALL	;1
+	const SEASON_WINTER ;2
+	const SEASON_SPRING ;3
+
 ; wBattleAnimFlags::
 	const_def
 	const BATTLEANIM_STOP_F          ; 0

@@ -2919,6 +2919,7 @@ wTimeOfDayPal:: db
 	ds 4
 wTimeOfDayPalFlags:: db
 wTimeOfDayPalset:: db
+wCurrentSeason:: db
 wCurTimeOfDay:: db
 
 	ds 1

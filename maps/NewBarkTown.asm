@@ -2,7 +2,6 @@
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
 	const NEWBARKTOWN_SILVER
-	const NEWBARKTOWN_SHRINE
 
 NewBarkTown_MapScripts:
 	def_scene_scripts
@@ -280,24 +279,6 @@ NewBarkTownElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
-NewBarkTownShrine:
-	callstd ShrineScript
-	ifequal 1,   .Fall
-	ifequal 2, .Winter
-	ifequal 3, .Spring
-	ifequal 4, .Summer
-	
-.Fall:
-	warp NEW_BARK_TOWN_FALL, 17,3
-	end
-.Winter:
-	warp NEW_BARK_TOWN_WINTER, 17,3
-	end
-.Spring:
-.Summer:
-	warp NEW_BARK_TOWN, 17,3
-	end	
-	
 NewBarkTown_MapEvents:
 	db 0, 0 ; filler
 
@@ -305,7 +286,6 @@ NewBarkTown_MapEvents:
 	warp_event  6,  3, ELMS_LAB, 1
 	warp_event 13,  5, PLAYERS_HOUSE_1F, 1
 	warp_event  3, 11, PLAYERS_NEIGHBORS_HOUSE, 1
-	warp_event 11, 13, NEW_BARK_TOWN_FALL, 1
 
 	def_coord_events
 	coord_event  1,  8, SCENE_DEFAULT, NewBarkTown_TeacherStopsYouScene1
@@ -321,4 +301,3 @@ NewBarkTown_MapEvents:
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
-	object_event 17, 2, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownShrine, -1
