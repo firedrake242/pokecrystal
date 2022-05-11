@@ -61,14 +61,10 @@ LoadSpecialMapPalette:
 	ret
 		
 .season
-	ld a, [wEnvironment]
-	cp ROUTE_FALL
+	ld a, [wCurrentSeason]
+	cp SEASON_FALL
 	jr z, .LoadFallPalette
-	cp ROUTE_WINTER
-	jr z, .LoadWinterPalette
-	cp TOWN_FALL
-	jr z, .LoadFallPalette
-	cp TOWN_WINTER
+	cp SEASON_WINTER
 	jr z, .LoadWinterPalette
 	and a
 	ret
